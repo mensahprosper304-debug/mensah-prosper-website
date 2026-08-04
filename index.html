@@ -2,120 +2,184 @@
 <html>
 <head>
 
-<title>Mensah Prosper | Dhino</title>
+<title>Dhino Digital Solutions</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 *{
+margin:0;
+padding:0;
 box-sizing:border-box;
+font-family:'Arial',sans-serif;
 scroll-behavior:smooth;
 }
 
+
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#071b2e;
+background:#081b29;
 color:white;
 }
 
-header{
-min-height:100vh;
+
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+background:linear-gradient(135deg,#081b29,#0077b6,#ffd700);
+
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#071b2e,#d4af37);
+
 padding:20px;
+
 }
 
-header h1{
-font-size:55px;
-color:#fff;
+
+.hero h1{
+
+font-size:60px;
+color:white;
+
 }
 
-header span{
+
+.hero span{
+
 color:#ffd700;
+
 }
 
-header p{
+
+.hero p{
+
 font-size:22px;
+margin:20px;
+
 }
+
 
 
 .btn{
+
 display:inline-block;
-padding:15px 25px;
-margin:10px;
+padding:15px 30px;
 border-radius:30px;
 background:#25D366;
 color:white;
 text-decoration:none;
 font-weight:bold;
+margin:10px;
+
+transition:.3s;
+
 }
 
 
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* SECTIONS */
+
+
 section{
+
 padding:60px 10%;
+
 }
 
 
 .title{
+
 text-align:center;
-font-size:35px;
+font-size:40px;
 color:#ffd700;
+margin-bottom:30px;
+
 }
+
 
 
 .card{
 
-background:#123452;
+background:#102f46;
+
 padding:25px;
-margin:20px 0;
+
 border-radius:20px;
-box-shadow:0 0 15px black;
+
+margin:20px 0;
+
+box-shadow:0 0 20px rgba(0,0,0,.5);
 
 }
+
 
 
 .cards{
 
 display:flex;
+
 gap:20px;
+
 flex-wrap:wrap;
 
 }
 
 
+
 .small{
 
 flex:1;
+
 min-width:250px;
 
 }
 
 
+
 .icon{
 
-font-size:45px;
+font-size:50px;
 
 }
 
 
-.business{
 
-background:#8b4513;
-
-}
-
+/* IT */
 
 .it{
 
-background:#143d59;
+border-left:8px solid #00b4d8;
 
 }
+
+
+
+/* FOOD BUSINESS */
+
+
+.food{
+
+background:linear-gradient(135deg,#8b4513,#d2691e);
+
+border-left:8px solid #ffd700;
+
+}
+
+
+
+/* CONTACT */
 
 
 .contact{
@@ -125,12 +189,16 @@ background:#006400;
 }
 
 
+
 footer{
 
 background:#ffd700;
-color:#071b2e;
-padding:20px;
+
+color:#081b29;
+
 text-align:center;
+
+padding:20px;
 
 }
 
@@ -143,15 +211,25 @@ text-align:center;
 <body>
 
 
-<header>
+
+<div class="hero">
+
+<div>
 
 <h1>
-Welcome to <span>Dhino</span>
+Welcome To <span>Dhino</span>
 </h1>
 
+
 <p>
-Mensah Prosper | IT Student | Web Developer
+Dhino Digital Solutions
 </p>
+
+
+<p>
+IT Student | Web Developer | Technology Creator
+</p>
+
 
 
 <a class="btn" href="https://wa.me/233533847339">
@@ -159,11 +237,16 @@ Mensah Prosper | IT Student | Web Developer
 </a>
 
 
-</header>
+</div>
+
+</div>
+
+
 
 
 
 <section>
+
 
 <h2 class="title">
 About Me
@@ -172,19 +255,29 @@ About Me
 
 <div class="card">
 
+<h2>
+Mensah Prosper (Dhino)
+</h2>
+
+
 <p>
-I am Mensah Prosper, also known as Dhino.
 I am an IT student passionate about technology,
-web development and creating digital solutions.
+website development and creating digital solutions.
 </p>
 
+
 </div>
+
 
 </section>
 
 
 
+
+
+
 <section>
+
 
 <h2 class="title">
 My IT Skills
@@ -198,15 +291,16 @@ My IT Skills
 
 <div class="icon">💻</div>
 
-<h3>
+<h2>
 Web Development
-</h3>
+</h2>
 
 <p>
-HTML, CSS and website creation.
+Creating modern websites using HTML and CSS.
 </p>
 
 </div>
+
 
 
 
@@ -214,15 +308,16 @@ HTML, CSS and website creation.
 
 <div class="icon">🌐</div>
 
-<h3>
+<h2>
 Online Projects
-</h3>
+</h2>
 
 <p>
-Building and publishing websites.
+Building and publishing digital platforms.
 </p>
 
 </div>
+
 
 
 
@@ -230,17 +325,19 @@ Building and publishing websites.
 
 <div class="icon">⚙️</div>
 
-<h3>
+<h2>
 Technology
-</h3>
+</h2>
 
 <p>
-Learning programming and IT skills.
+Learning programming and IT solutions.
 </p>
 
 </div>
 
 
+
 </div>
+
 
 </section>
