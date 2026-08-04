@@ -1,500 +1,380 @@
 <!DOCTYPE html>
-<!-- saved from url=(0058)file:///C:/Users/Dell/Desktop/my%20website/index.html#home -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="google-site-verification" content="tptvLLqiLK5YbJPdbwt97NgObmm-aGhfINWOtRuVG-c" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mensah Prosper / Dhino | IT, Programming & Football</title>
-<meta name="description" content="Mensah Prosper / Dhino — an IT and programming student who enjoys coding, football, and technology.">
-    <style>
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+  <title>Mensah Prosper / Dhino | IT, Programming & Football</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #07111f;
-            color: white;
-        }
+  <meta name="description" content="Mensah Prosper / Dhino — an IT and programming student who enjoys coding, football and technology. Also featuring GYE NYAME HOT KENKEY, founded by Joyce Otoo.">
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #050b14;
-            padding: 18px;
-            text-align: center;
-            border-bottom: 3px solid #ffd21f;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 7px 12px;
-            font-weight: bold;
-            display: inline-block;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: white;
+      line-height: 1.6;
+    }
 
-        nav a:hover {
-            color: #ffd21f;
-        }
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      background:
+        radial-gradient(circle at top right, #ffd90033, transparent 35%),
+        radial-gradient(circle at bottom left, #0066ff33, transparent 35%),
+        #07111f;
+    }
 
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #06152c, #102c4d);
-        }
+    .hero {
+      max-width: 900px;
+    }
 
-        .hero h1 {
-            font-size: 60px;
-            color: #ffd21f;
-            animation: fadeIn 1.5s ease;
-        }
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid #ffd900;
+      border-radius: 30px;
+      color: #ffd900;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-        .hero h2 {
-            font-size: 28px;
-        }
+    h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      margin-bottom: 10px;
+    }
 
-        .hero p {
-            max-width: 700px;
-            margin: 20px auto;
-            font-size: 19px;
-            line-height: 1.7;
-        }
+    h1 span {
+      color: #ffd900;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 13px 22px;
-            margin: 8px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            background: #ffd21f;
-            color: #07111f;
-            transition: 0.3s;
-        }
+    .hero p {
+      font-size: 20px;
+      color: #c9d3df;
+      margin: 15px 0 30px;
+    }
 
-        .btn:hover {
-            transform: translateY(-4px) scale(1.04);
-        }
+    .buttons a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 25px;
+      margin: 7px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: .3s;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 75px 25px;
-        }
+    .primary {
+      background: #ffd900;
+      color: #07111f;
+    }
 
-        section h2 {
-            text-align: center;
-            color: #ffd21f;
-            font-size: 36px;
-            margin-bottom: 30px;
-        }
+    .secondary {
+      border: 1px solid #ffd900;
+      color: #ffd900;
+    }
 
-        .card {
-            background: #101e30;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px black;
-        }
+    .buttons a:hover {
+      transform: translateY(-4px);
+    }
 
-        .card p {
-            line-height: 1.7;
-            font-size: 17px;
-        }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #050c16ee;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #ffffff18;
+      padding: 15px;
+      text-align: center;
+    }
 
-        .profile-photo {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 6px solid #ffd21f;
-            margin: 20px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
+    nav a:hover {
+      color: #ffd900;
+    }
 
-        .skill {
-            background: #ffd21f;
-            color: #07111f;
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+    section {
+      padding: 80px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .business {
-            background: linear-gradient(135deg, #172d18, #253c1f);
-            border: 3px solid #ffd21f;
-        }
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+      color: #ffd900;
+    }
 
-        .business-name {
-            text-align: center;
-            font-size: 34px;
-            color: #ffd21f;
-            margin-bottom: 10px;
-        }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
 
-        .business-tagline {
-            text-align: center;
-            font-size: 21px;
-            font-weight: bold;
-        }
+    .card {
+      background: #101d2d;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #ffffff12;
+      transition: .3s;
+    }
 
-        .food-box {
-            text-align: center;
-            font-size: 24px;
-            margin: 25px 0;
-            padding: 25px;
-            border-radius: 15px;
-            background: #07111f;
-        }
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #ffd90066;
+    }
 
-        .contact {
-            text-align: center;
-        }
+    .card h3 {
+      color: #ffd900;
+      margin-bottom: 10px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #050b14;
-            border-top: 3px solid #ffd21f;
-        }
+    .business {
+      background: linear-gradient(135deg, #10263a, #07111f);
+      border-radius: 25px;
+      padding: 45px;
+      border: 1px solid #ffd90055;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+    .business h3 {
+      color: #ffd900;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .order-box {
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 18px;
+      background: #ffd900;
+      color: #07111f;
+      text-align: center;
+    }
 
-        img {
-            animation: fadeIn 2s ease;
-        }
+    .order-box h3 {
+      color: #07111f;
+    }
 
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 40px;
-            }
+    .order-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 13px 25px;
+      background: #07111f;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-            section h2 {
-                font-size: 30px;
-            }
-        }
-    </style>
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #040a12;
+      color: #9caabd;
+    }
+
+    .highlight {
+      color: #ffd900;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .business {
+        padding: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#home">Home</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#about">About Me</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#skills">Skills</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#football">Football</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#school">School</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#business">Mom's Business</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#goals">Goals</a>
-        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#contact">Contact</a>
-    </nav>
-
-
-    <!-- HOME -->
-    <header class="hero" id="home">
-        <div>
-            <h1>Mensah Prosper</h1>
-
-            <h2>AKA Dhino ⚡</h2>
-
-            <p>
-                Welcome to my personal website!
-                I am a student who loves IT, programming,
-                coding and football.
-            </p>
-
-            <a class="btn" href="file:///C:/Users/Dell/Desktop/my%20website/index.html#about">
-                Explore My Website 🚀
-            </a>
-
-            <button class="btn" onclick="alert(&#39;Welcome to Dhino\\&#39;s website! ⚡&#39;)">
-                Click Me!
-            </button>
-        </div>
-    </header>
-
-
-    <!-- ABOUT ME -->
-    <section id="about">
-
-        <h2>About Me 👨‍💻</h2>
-
-        <div class="card" style="text-align:center;">
-
-            <!--
-            PHOTO:
-            Later, put your picture in the same folder as this file.
-            Rename it to profile.jpg
-            -->
-
-            <img src="file:///C:/Users/Dell/Desktop/my%20website/profile.jpg" alt="Mensah Prosper" class="profile-photo">
-
-            <h3>Mensah Prosper — Dhino</h3>
-
-            <p>
-                I am a boy who likes studying IT and also likes
-                playing football. I enjoy learning about computers,
-                programming and coding.
-            </p>
-
-            <p>
-                I am always interested in learning new skills
-                and improving myself.
-            </p>
-
-        </div>
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills">
-
-        <h2>My Skills 💻</h2>
-
-        <div class="card">
-
-            <div class="skills">
-
-                <div class="skill">
-                    IT 💻
-                </div>
-
-                <div class="skill">
-                    Programming 👨‍💻
-                </div>
-
-                <div class="skill">
-                    Coding ⚙️
-                </div>
-
-                <div class="skill">
-                    Computer Skills 🖥️
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTBALL -->
-    <section id="football">
-
-        <h2>Football ⚽</h2>
-
-        <div class="card">
-
-            <p>
-                Football is one of the things I enjoy most.
-                I like playing football and I hope to improve
-                my skills and achieve my dreams.
-            </p>
-
-            <button class="btn" onclick="alert(&#39;Football mode activated! ⚽🔥&#39;)">
-                Football Mode ⚽
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- SCHOOL -->
-    <section id="school">
-
-        <h2>My School 🎓</h2>
-
-        <div class="card">
-
-            <h3>Action Senior High School</h3>
-
-            <p>
-                <strong>Class:</strong> SHS 1
-            </p>
-
-            <p>
-                I am studying and developing my IT and
-                computer skills while continuing my education.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- MOM'S BUSINESS -->
-    <section id="business">
-
-        <h2>Support My Mom's Business ❤️</h2>
-
-        <div class="card business">
-
-            <div class="business-name">
-                GYE NYAME HOT KENKEY 🍲
-            </div>
-
-        <a class="btn" href="tel:0242681763">
-    🍲 Come &amp; Enjoy Our Meal
-</a>
-            <p></p>
-
-            <div class="food-box">
-                🍲 HOT KENKEY 🍲
-                <br>
-                <small>Fresh • Delicious • Enjoyable</small>
-            </div>
-
-            <p>
-                Welcome to <strong>GYE NYAME HOT KENKEY</strong>,
-                a food business located in <strong>Kasapreko</strong>.
-            </p>
-
-            <p>
-                We sell delicious kenkey and other foods.
-                Come and enjoy a good meal with us! ❤️
-            </p>
-
-            <h3>📍 Location</h3>
-
-            <p>
-                Kasapreko
-            </p>
-
-            <h3>📞 Contact the Business</h3>
-
-            <div class="contact">
-
-                <a class="btn" href="tel:0242681763">
-                    Call Us 📞
-                </a>
-
-                <a class="btn" href="https://wa.me/233242681763" target="_blank">
-                    WhatsApp Us 💬
-                </a>
-
-                <a class="btn" href="mailto:mensahprosper304@gmail.com">
-                    Email Us 📧
-                </a>
-
-            </div><div class="food-photos">
-    <h3>Our Food 🍲</h3>
-
-    <img src="file:///C:/Users/Dell/Desktop/my%20website/kenkey1.jpg" alt="GYE NYAME HOT KENKEY">
-    <img src="file:///C:/Users/Dell/Desktop/my%20website/kenkey2.jpg" alt="Delicious Kenkey">
-</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- GOALS -->
-    <section id="goals">
-
-        <h2>My Future Goals 🎯</h2>
-
-        <div class="card">
-
-            <p>
-                My dream is to become either a
-                <strong>footballer ⚽</strong>
-                or a <strong>soldier 🪖</strong>.
-            </p>
-
-            <p>
-                I also want to continue improving my IT,
-                programming and coding skills.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-        <h2>Contact Me 📱</h2>
-
-        <div class="card contact">
-
-            <p>
-                Want to get in touch with Mensah Prosper?
-            </p>
-
-            <a class="btn" href="mailto:mensahprosper304@gmail.com">
-                Email Me 📧
-            </a>
-
-            <a class="btn" href="tel:0533857339">
-                Call Me 📞
-            </a>
-
-            <a class="btn" href="https://wa.me/233533857339" target="_blank">
-                My WhatsApp 💬
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- BACK TO TOP -->
-    <div style="text-align:center; padding-bottom:40px;">
-
-        <button class="btn" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;})">
-
-            Back to Top ⬆️
-
-        </button>
-
+  <header id="home">
+    <div class="hero">
+      <div class="badge">WELCOME TO MY WEBSITE</div>
+
+      <h1>Mensah <span>Prosper</span></h1>
+
+      <p>
+        Also known as <strong>Dhino</strong> — IT student, programmer,
+        coder and football lover.
+      </p>
+
+      <div class="buttons">
+        <a href="#about" class="primary">Explore Me</a>
+        <a href="#business" class="secondary">Visit Business</a>
+      </div>
     </div>
+  </header>
 
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#football">Football</a>
+    <a href="#business">Business</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- FOOTER -->
-    <footer>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>👨‍💻 Who I Am</h3>
+        <p>
+          My name is <span class="highlight">Mensah Prosper</span>,
+          also known as Dhino. I am a student interested in technology,
+          programming and computers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎓 Education</h3>
+        <p>
+          I am an SHS 1 student at
+          <span class="highlight">Action Senior High School</span>.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎯 My Goals</h3>
+        <p>
+          I want to develop my skills in technology and programming
+          while working toward my future career.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My Skills & Interests</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>💻 IT</h3>
+        <p>Learning about computers, information technology and digital systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>⌨️ Programming</h3>
+        <p>Developing my coding skills and learning how websites and programs work.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌐 Web Development</h3>
+        <p>Building websites and learning how to publish them online.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚽ Football</h3>
+        <p>Football is one of my biggest interests outside technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="football">
+    <h2 class="section-title">Football ⚽</h2>
+
+    <div class="card">
+      <h3>My Football Passion</h3>
+      <p>
+        I enjoy playing football and hope to continue developing
+        myself both on the football field and in technology.
+      </p>
+    </div>
+  </section>
+
+  <section id="business">
+    <h2 class="section-title">GYE NYAME HOT KENKEY 🍲</h2>
+
+    <div class="business">
+      <h3>GYE NYAME HOT KENKEY</h3>
+
+      <p>
+        Welcome to our food business, proudly founded by
+        <span class="highlight">Joyce Otoo</span>.
+      </p>
+
+      <br>
+
+      <p>
+        We serve delicious <strong>kenkey, fish and pepper</strong>
+        for customers who want a tasty and satisfying meal.
+      </p>
+
+      <div class="order-box">
+        <h3>📦 WE TAKE ORDERS!</h3>
 
         <p>
-            Thanks for visiting my website! 🙏
+          Want to enjoy our food? Place your order with us
+          and get ready for a delicious meal.
         </p>
 
-        <p>
-            Please support GYE NYAME HOT KENKEY ❤️🍲
-        </p>
+        <a href="tel:0242681763" class="order-button">
+          📞 Place an Order
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <p>
-            © 2026 Mensah Prosper | Dhino
-        </p>
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
 
-    </footer>
+    <div class="card">
+      <h3>GYE NYAME HOT KENKEY</h3>
 
+      <p>
+        📞 Business Orders:
+        <span class="highlight">024 268 1763</span>
+      </p>
 
-</body></html>
+      <p>
+        📍 Location: Kasapreko
+      </p>
+
+      <p>
+        📦 We take orders — contact us and enjoy your meal!
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Mensah Prosper / Dhino</p>
+    <p>GYE NYAME HOT KENKEY — Founder: Joyce Otoo</p>
+  </footer>
+
+</body>
+</html>
