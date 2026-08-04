@@ -1,380 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensah Prosper Website</title>
 
-  <title>Mensah Prosper / Dhino | IT, Programming & Football</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b1f33;
+    color:white;
+}
 
-  <meta name="description" content="Mensah Prosper / Dhino — an IT and programming student who enjoys coding, football and technology. Also featuring GYE NYAME HOT KENKEY, founded by Joyce Otoo.">
+header{
+    background:#f4c542;
+    color:#0b1f33;
+    padding:30px;
+    text-align:center;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+section{
+    padding:25px;
+    margin:20px;
+    background:#163a5c;
+    border-radius:15px;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #07111f;
-      color: white;
-      line-height: 1.6;
-    }
+h2{
+    color:#f4c542;
+}
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      background:
-        radial-gradient(circle at top right, #ffd90033, transparent 35%),
-        radial-gradient(circle at bottom left, #0066ff33, transparent 35%),
-        #07111f;
-    }
+button{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+}
 
-    .hero {
-      max-width: 900px;
-    }
+a{
+    color:white;
+    text-decoration:none;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 8px 18px;
-      border: 1px solid #ffd900;
-      border-radius: 30px;
-      color: #ffd900;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
+.card{
+    background:#234f75;
+    padding:15px;
+    border-radius:10px;
+}
 
-    h1 {
-      font-size: clamp(45px, 8vw, 90px);
-      margin-bottom: 10px;
-    }
+footer{
+    background:#f4c542;
+    color:#0b1f33;
+    text-align:center;
+    padding:15px;
+}
+</style>
 
-    h1 span {
-      color: #ffd900;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #c9d3df;
-      margin: 15px 0 30px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 13px 25px;
-      margin: 7px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: .3s;
-    }
-
-    .primary {
-      background: #ffd900;
-      color: #07111f;
-    }
-
-    .secondary {
-      border: 1px solid #ffd900;
-      color: #ffd900;
-    }
-
-    .buttons a:hover {
-      transform: translateY(-4px);
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #050c16ee;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #ffffff18;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #ffd900;
-    }
-
-    section {
-      padding: 80px 8%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 40px;
-      color: #ffd900;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: #101d2d;
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid #ffffff12;
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: #ffd90066;
-    }
-
-    .card h3 {
-      color: #ffd900;
-      margin-bottom: 10px;
-    }
-
-    .business {
-      background: linear-gradient(135deg, #10263a, #07111f);
-      border-radius: 25px;
-      padding: 45px;
-      border: 1px solid #ffd90055;
-    }
-
-    .business h3 {
-      color: #ffd900;
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .order-box {
-      margin-top: 30px;
-      padding: 25px;
-      border-radius: 18px;
-      background: #ffd900;
-      color: #07111f;
-      text-align: center;
-    }
-
-    .order-box h3 {
-      color: #07111f;
-    }
-
-    .order-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 13px 25px;
-      background: #07111f;
-      color: white;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #040a12;
-      color: #9caabd;
-    }
-
-    .highlight {
-      color: #ffd900;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-
-      section {
-        padding: 60px 6%;
-      }
-
-      .business {
-        padding: 28px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <header id="home">
-    <div class="hero">
-      <div class="badge">WELCOME TO MY WEBSITE</div>
+<header>
+<h1>MY WEBSITE PROJECT</h1>
+<h3>Mensah Prosper / Dhino</h3>
+<p>IT & Web Development Student</p>
+</header>
 
-      <h1>Mensah <span>Prosper</span></h1>
 
-      <p>
-        Also known as <strong>Dhino</strong> — IT student, programmer,
-        coder and football lover.
-      </p>
+<section>
+<h2>About Me</h2>
+<p>
+My name is Mensah Prosper, also known as Dhino.
+I am an IT student interested in technology, programming and web development.
+</p>
+</section>
 
-      <div class="buttons">
-        <a href="#about" class="primary">Explore Me</a>
-        <a href="#business" class="secondary">Visit Business</a>
-      </div>
-    </div>
-  </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#football">Football</a>
-    <a href="#business">Business</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<section>
+<h2>My Skills</h2>
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
+<div class="card">
+<p>💻 HTML - Website structure</p>
+<p>🎨 CSS - Website design</p>
+<p>🌐 GitHub - Hosting my projects</p>
+<p>🚀 Web Development</p>
+</div>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>👨‍💻 Who I Am</h3>
-        <p>
-          My name is <span class="highlight">Mensah Prosper</span>,
-          also known as Dhino. I am a student interested in technology,
-          programming and computers.
-        </p>
-      </div>
+</section>
 
-      <div class="card">
-        <h3>🎓 Education</h3>
-        <p>
-          I am an SHS 1 student at
-          <span class="highlight">Action Senior High School</span>.
-        </p>
-      </div>
 
-      <div class="card">
-        <h3>🎯 My Goals</h3>
-        <p>
-          I want to develop my skills in technology and programming
-          while working toward my future career.
-        </p>
-      </div>
-    </div>
-  </section>
+<section>
+<h2>My Interests</h2>
 
-  <section id="skills">
-    <h2 class="section-title">My Skills & Interests</h2>
+<p>⚽ Football</p>
+<p>💻 Technology</p>
+<p>👨‍💻 Programming</p>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>💻 IT</h3>
-        <p>Learning about computers, information technology and digital systems.</p>
-      </div>
+</section>
 
-      <div class="card">
-        <h3>⌨️ Programming</h3>
-        <p>Developing my coding skills and learning how websites and programs work.</p>
-      </div>
 
-      <div class="card">
-        <h3>🌐 Web Development</h3>
-        <p>Building websites and learning how to publish them online.</p>
-      </div>
+<section>
 
-      <div class="card">
-        <h3>⚽ Football</h3>
-        <p>Football is one of my biggest interests outside technology.</p>
-      </div>
-    </div>
-  </section>
+<h2>GYE NYAME HOT KENKEY</h2>
 
-  <section id="football">
-    <h2 class="section-title">Football ⚽</h2>
+<p>
+A food business featured on my website.
+</p>
 
-    <div class="card">
-      <h3>My Football Passion</h3>
-      <p>
-        I enjoy playing football and hope to continue developing
-        myself both on the football field and in technology.
-      </p>
-    </div>
-  </section>
+<p>
+Founder: <b>Joyce Otoo</b>
+</p>
 
-  <section id="business">
-    <h2 class="section-title">GYE NYAME HOT KENKEY 🍲</h2>
+<p>
+We provide delicious kenkey, fish and pepper.
+</p>
 
-    <div class="business">
-      <h3>GYE NYAME HOT KENKEY</h3>
+</section>
 
-      <p>
-        Welcome to our food business, proudly founded by
-        <span class="highlight">Joyce Otoo</span>.
-      </p>
 
-      <br>
 
-      <p>
-        We serve delicious <strong>kenkey, fish and pepper</strong>
-        for customers who want a tasty and satisfying meal.
-      </p>
+<section>
 
-      <div class="order-box">
-        <h3>📦 WE TAKE ORDERS!</h3>
+<h2>Order Now</h2>
 
-        <p>
-          Want to enjoy our food? Place your order with us
-          and get ready for a delicious meal.
-        </p>
+<p>
+Contact us directly through WhatsApp for orders.
+</p>
 
-        <a href="tel:0242681763" class="order-button">
-          📞 Place an Order
-        </a>
-      </div>
-    </div>
-  </section>
+<a href="https://wa.me/233533857339" target="_blank">
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">Contact</h2>
+<button>
+💬 Order on WhatsApp
+</button>
 
-    <div class="card">
-      <h3>GYE NYAME HOT KENKEY</h3>
+</a>
 
-      <p>
-        📞 Business Orders:
-        <span class="highlight">024 268 1763</span>
-      </p>
+</section>
 
-      <p>
-        📍 Location: Kasapreko
-      </p>
 
-      <p>
-        📦 We take orders — contact us and enjoy your meal!
-      </p>
-    </div>
-  </section>
+<section>
 
-  <footer>
-    <p>© 2026 Mensah Prosper / Dhino</p>
-    <p>GYE NYAME HOT KENKEY — Founder: Joyce Otoo</p>
-  </footer>
+<h2>Contact</h2>
+
+<p>
+WhatsApp: +233533857339
+</p>
+
+</section>
+
+
+
+<footer>
+
+<p>
+© 2026 Mensah Prosper Website
+</p>
+
+</footer>
+
 
 </body>
 </html>
