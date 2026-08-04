@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/Dell/Desktop/my%20website/index.html#home -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mensah Prosper | Dhino</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #050b14;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 3px solid #ffd21f;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 7px 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #ffd21f;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #06152c, #102c4d);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: #ffd21f;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            margin: 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            background: #ffd21f;
+            color: #07111f;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 75px 25px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #ffd21f;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #101e30;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px black;
+        }
+
+        .card p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #ffd21f;
+            margin: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #ffd21f;
+            color: #07111f;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .business {
+            background: linear-gradient(135deg, #172d18, #253c1f);
+            border: 3px solid #ffd21f;
+        }
+
+        .business-name {
+            text-align: center;
+            font-size: 34px;
+            color: #ffd21f;
+            margin-bottom: 10px;
+        }
+
+        .business-tagline {
+            text-align: center;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .food-box {
+            text-align: center;
+            font-size: 24px;
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 15px;
+            background: #07111f;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #050b14;
+            border-top: 3px solid #ffd21f;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        img {
+            animation: fadeIn 2s ease;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            section h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#home">Home</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#about">About Me</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#skills">Skills</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#football">Football</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#school">School</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#business">Mom's Business</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#goals">Goals</a>
+        <a href="file:///C:/Users/Dell/Desktop/my%20website/index.html#contact">Contact</a>
+    </nav>
+
+
+    <!-- HOME -->
+    <header class="hero" id="home">
+        <div>
+            <h1>Mensah Prosper</h1>
+
+            <h2>AKA Dhino ⚡</h2>
+
+            <p>
+                Welcome to my personal website!
+                I am a student who loves IT, programming,
+                coding and football.
+            </p>
+
+            <a class="btn" href="file:///C:/Users/Dell/Desktop/my%20website/index.html#about">
+                Explore My Website 🚀
+            </a>
+
+            <button class="btn" onclick="alert(&#39;Welcome to Dhino\\&#39;s website! ⚡&#39;)">
+                Click Me!
+            </button>
+        </div>
+    </header>
+
+
+    <!-- ABOUT ME -->
+    <section id="about">
+
+        <h2>About Me 👨‍💻</h2>
+
+        <div class="card" style="text-align:center;">
+
+            <!--
+            PHOTO:
+            Later, put your picture in the same folder as this file.
+            Rename it to profile.jpg
+            -->
+
+            <img src="file:///C:/Users/Dell/Desktop/my%20website/profile.jpg" alt="Mensah Prosper" class="profile-photo">
+
+            <h3>Mensah Prosper — Dhino</h3>
+
+            <p>
+                I am a boy who likes studying IT and also likes
+                playing football. I enjoy learning about computers,
+                programming and coding.
+            </p>
+
+            <p>
+                I am always interested in learning new skills
+                and improving myself.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2>My Skills 💻</h2>
+
+        <div class="card">
+
+            <div class="skills">
+
+                <div class="skill">
+                    IT 💻
+                </div>
+
+                <div class="skill">
+                    Programming 👨‍💻
+                </div>
+
+                <div class="skill">
+                    Coding ⚙️
+                </div>
+
+                <div class="skill">
+                    Computer Skills 🖥️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTBALL -->
+    <section id="football">
+
+        <h2>Football ⚽</h2>
+
+        <div class="card">
+
+            <p>
+                Football is one of the things I enjoy most.
+                I like playing football and I hope to improve
+                my skills and achieve my dreams.
+            </p>
+
+            <button class="btn" onclick="alert(&#39;Football mode activated! ⚽🔥&#39;)">
+                Football Mode ⚽
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCHOOL -->
+    <section id="school">
+
+        <h2>My School 🎓</h2>
+
+        <div class="card">
+
+            <h3>Action Senior High School</h3>
+
+            <p>
+                <strong>Class:</strong> SHS 1
+            </p>
+
+            <p>
+                I am studying and developing my IT and
+                computer skills while continuing my education.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOM'S BUSINESS -->
+    <section id="business">
+
+        <h2>Support My Mom's Business ❤️</h2>
+
+        <div class="card business">
+
+            <div class="business-name">
+                GYE NYAME HOT KENKEY 🍲
+            </div>
+
+        <a class="btn" href="tel:0242681763">
+    🍲 Come &amp; Enjoy Our Meal
+</a>
+            <p></p>
+
+            <div class="food-box">
+                🍲 HOT KENKEY 🍲
+                <br>
+                <small>Fresh • Delicious • Enjoyable</small>
+            </div>
+
+            <p>
+                Welcome to <strong>GYE NYAME HOT KENKEY</strong>,
+                a food business located in <strong>Kasapreko</strong>.
+            </p>
+
+            <p>
+                We sell delicious kenkey and other foods.
+                Come and enjoy a good meal with us! ❤️
+            </p>
+
+            <h3>📍 Location</h3>
+
+            <p>
+                Kasapreko
+            </p>
+
+            <h3>📞 Contact the Business</h3>
+
+            <div class="contact">
+
+                <a class="btn" href="tel:0242681763">
+                    Call Us 📞
+                </a>
+
+                <a class="btn" href="https://wa.me/233242681763" target="_blank">
+                    WhatsApp Us 💬
+                </a>
+
+                <a class="btn" href="mailto:mensahprosper304@gmail.com">
+                    Email Us 📧
+                </a>
+
+            </div><div class="food-photos">
+    <h3>Our Food 🍲</h3>
+
+    <img src="file:///C:/Users/Dell/Desktop/my%20website/kenkey1.jpg" alt="GYE NYAME HOT KENKEY">
+    <img src="file:///C:/Users/Dell/Desktop/my%20website/kenkey2.jpg" alt="Delicious Kenkey">
+</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOALS -->
+    <section id="goals">
+
+        <h2>My Future Goals 🎯</h2>
+
+        <div class="card">
+
+            <p>
+                My dream is to become either a
+                <strong>footballer ⚽</strong>
+                or a <strong>soldier 🪖</strong>.
+            </p>
+
+            <p>
+                I also want to continue improving my IT,
+                programming and coding skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2>Contact Me 📱</h2>
+
+        <div class="card contact">
+
+            <p>
+                Want to get in touch with Mensah Prosper?
+            </p>
+
+            <a class="btn" href="mailto:mensahprosper304@gmail.com">
+                Email Me 📧
+            </a>
+
+            <a class="btn" href="tel:0533857339">
+                Call Me 📞
+            </a>
+
+            <a class="btn" href="https://wa.me/233533857339" target="_blank">
+                My WhatsApp 💬
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- BACK TO TOP -->
+    <div style="text-align:center; padding-bottom:40px;">
+
+        <button class="btn" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;})">
+
+            Back to Top ⬆️
+
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Thanks for visiting my website! 🙏
+        </p>
+
+        <p>
+            Please support GYE NYAME HOT KENKEY ❤️🍲
+        </p>
+
+        <p>
+            © 2026 Mensah Prosper | Dhino
+        </p>
+
+    </footer>
+
+
+</body></html>
