@@ -12,18 +12,47 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Poppins',Arial,sans-serif;
 }
 
 body{
-background:#fff8e7;
+background:#fff7df;
 color:#222;
 }
 
+
+/* TOP NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0b6b3a;
+padding:15px;
+z-index:1000;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+
+
+/* HERO */
+
 .hero{
+
 height:100vh;
+
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
 url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
 
 background-size:cover;
@@ -33,118 +62,147 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+
 color:white;
-padding:20px;
+
 }
+
 
 .hero h1{
+
 font-size:60px;
 color:#ffd700;
+
+animation:zoom 2s;
+
 }
+
 
 .hero p{
+
 font-size:25px;
-margin:15px;
+margin:20px;
+
 }
 
-.delivery{
-background:#25D366;
-padding:12px 25px;
-border-radius:30px;
-display:inline-block;
-font-weight:bold;
+
+
+@keyframes zoom{
+
+from{
+transform:scale(.5);
 }
+
+to{
+transform:scale(1);
+}
+
+}
+
+
+
+/* BUTTONS */
 
 .btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-border-radius:30px;
-background:#25D366;
+
+background:#e31b23;
 color:white;
+
+padding:15px 30px;
+
+border-radius:30px;
+
 text-decoration:none;
+
 font-weight:bold;
+
+display:inline-block;
+
+margin:10px;
+
+transition:.3s;
+
 }
+
+
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+.whatsapp{
+
+background:#25D366;
+
+}
+
 
 .call{
-background:#000;
+
+background:#111;
+
 }
+
+
+
+/* DELIVERY */
+
+.delivery{
+
+background:#ffd700;
+
+color:#111;
+
+padding:15px;
+
+border-radius:50px;
+
+display:inline-block;
+
+font-weight:bold;
+
+}
+
+
+
 
 section{
-padding:60px 10%;
+
+padding:70px 10%;
+
 }
+
+
 
 .title{
+
 text-align:center;
+
 font-size:40px;
-color:#a65e00;
+
+color:#0b6b3a;
+
 margin-bottom:30px;
+
 }
+
 
 .card{
+
 background:white;
+
 padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px #ccc;
-margin:20px 0;
+
+border-radius:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
 }
 
-.story{
-display:flex;
-gap:30px;
-align-items:center;
-flex-wrap:wrap;
-}
 
-.story img{
-width:300px;
-border-radius:20px;
-}
-
-.menu-box{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.menu{
-flex:1;
-min-width:250px;
-text-align:center;
-}
-
-.menu img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:15px;
-}
-
-.price{
-font-size:25px;
-color:green;
-font-weight:bold;
-}
-
-.review{
-background:#fff0b3;
-}
-
-.payment{
-background:#008000;
-color:white;
-}
-
-.location{
-text-align:center;
-}
-
-footer{
-background:#5b3000;
-color:white;
-padding:30px;
-text-align:center;
-}
 
 </style>
 
@@ -154,286 +212,56 @@ text-align:center;
 <body>
 
 
+<nav>
+
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+
 <div class="hero">
 
 <div>
+
 
 <h1>
 MAMA JOYCE KENKEY 🍲
 </h1>
 
+
 <p>
-Soft Kenkey • Fresh Pepper • Made With Love ❤️
+Hot Ghana Kenkey Made With Love ❤️
 </p>
+
 
 <div class="delivery">
-🚚 FAST DELIVERY AVAILABLE
+🚚 Fast Delivery Available
 </div>
-
-<br>
-
-<a class="btn" href="https://wa.me/233242681763">
-🟢 ORDER ON WHATSAPP
-</a>
-
-<a class="btn call" href="tel:0242681763">
-📞 CALL NOW
-</a>
-
-</div>
-
-</div>
-
-
-
-
-<section>
-
-<h2 class="title">
-People Buy From People ❤️
-</h2>
-
-
-<div class="card story">
-
-<img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d">
-
-
-<div>
-
-<h2>
-Mama Joyce Story
-</h2>
-
-<p>
-
-Because it's made with love.
-
-Mama Joyce has been wrapping hot kenkey
-in Accra Kasapreko for 13 years.
-
-Fresh every morning.
-Soft every time.
-
-Pepper that makes you sweat and smile.
-
-From our kitchen to your plate,
-taste the difference.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<section>
-
-<h2 class="title">
-Our Menu 🍽️
-</h2>
-
-
-<div class="menu-box">
-
-
-<div class="card menu">
-
-<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-
-<h2>Kenkey Only</h2>
-
-<p class="price">
-GH¢5
-</p>
-
-<a class="btn" href="https://wa.me/233242681763">
-Order
-</a>
-
-</div>
-
-
-
-<div class="card menu">
-
-<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
-
-<h2>Kenkey + Fish</h2>
-
-<p class="price">
-GH¢20 - GH¢30
-</p>
-
-<a class="btn" href="https://wa.me/233242681763">
-Order
-</a>
-
-</div>
-
-
-
-
-<div class="card menu">
-
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
-
-<h2>Kenkey + Chicken</h2>
-
-<p class="price">
-GH¢35
-</p>
-
-<a class="btn" href="https://wa.me/233242681763">
-Order
-</a>
-
-</div>
-
-
-
-<div class="card menu">
-
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
-
-<h2>All In One 🔥</h2>
-
-<p class="price">
-GH¢50
-</p>
-
-<a class="btn" href="https://wa.me/233242681763">
-Order
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-<section class="payment">
-
-<h2 class="title">
-💰 Pay With MoMo
-</h2>
-
-
-<div class="card">
-
-<p>
-MTN MoMo:
-<b>0242681763</b>
-</p>
-
-<p>
-Business:
-<b>Mama Joyce Kenkey</b>
-</p>
-
-<p>
-After payment send receipt on WhatsApp.
-</p>
-
-<a class="btn" href="https://wa.me/233242681763">
-Send Receipt
-</a>
-
-</div>
-
-</section>
-
-
-
-
-
-<section>
-
-<h2 class="title">
-Customer Review ⭐
-</h2>
-
-
-<div class="card review">
-
-<h2>
-⭐⭐⭐⭐⭐
-</h2>
-
-
-<p>
-"Eii this kenkey have been soft paa!
-The pepper too has fire 🔥.
-Mama Joyce in Accra Kasapreko dey do the work."
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section class="location">
-
-<h2 class="title">
-📍 Find Us Here
-</h2>
-
-
-<p>
-Accra - Kasapreko
-</p>
 
 
 <br>
 
 
-<a class="btn" href="https://maps.google.com/?q=Kasapreko+Accra">
-Open Google Maps
+<a class="btn whatsapp"
+href="https://wa.me/233242681763">
+
+🟢 Order WhatsApp
+
 </a>
 
 
-</section>
+
+<a class="btn call"
+href="tel:0242681763">
+
+📞 Call Now
+
+</a>
 
 
+</div>
 
-
-
-<footer>
-
-<h2>
-MAMA JOYCE KENKEY 🍲
-</h2>
-
-<p>
-Open Daily: 8AM - 9PM
-</p>
-
-<p>
-📞 0242681763
-</p>
-
-<p>
-© 2026 All Rights Reserved
-</p>
-
-</footer>
-
-
-</body>
-
-</html>
+</div>
