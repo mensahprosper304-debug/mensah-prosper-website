@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYE NYAME HOT KENKEY | Luxury Kenkey in Accra</title>
+<title>GYE NYAME HOT KENKEY | #1 Luxury Kenkey in Accra</title>
 <style>
 :root{
   --gold: #FFD700;
@@ -19,40 +19,53 @@ body{background:linear-gradient(180deg, var(--black), #2a1a00);color:var(--white
 header{background:linear-gradient(135deg,var(--orange),var(--red),var(--gold));padding:30px;text-align:center;border-bottom:4px solid var(--gold);}
 header h1{color:var(--white);font-size:2.8rem;text-shadow:2px 2px 4px var(--black);}
 header p{color:var(--white);font-size:1.1rem;font-weight:bold;}
+.trust-bar{background:var(--dark);padding:12px;text-align:center;font-size:0.9rem;border-bottom:2px solid var(--gold);}
+.trust-bar span{margin:0 15px;color:var(--gold);}
 nav{background:var(--dark);padding:15px;text-align:center;position:sticky;top:0;z-index:10;}
-nav a{color:var(--gold);margin:0 15px;text-decoration:none;font-weight:bold;font-size:1.1rem;}
+nav a{color:var(--gold);margin:0 12px;text-decoration:none;font-weight:bold;font-size:1rem;}
 nav a:hover{color:var(--orange);}
 section{padding:60px 20px;}
 .section-title{text-align:center;color:var(--gold);font-size:2.2rem;margin-bottom:30px;text-shadow:1px 1px 2px var(--black);}
 .btn{background:linear-gradient(90deg,var(--gold),var(--orange));color:var(--black);padding:14px 30px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;font-size:1.1rem;}
 .btn:hover{transform:scale(1.05);}
 .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-.menu-item{background:linear-gradient(145deg,var(--dark),#2a2a2a);padding:25px;border-radius:15px;border:2px solid var(--gold);box-shadow:0 0 15px rgba(255,215,0,0.3);}
+.menu-item{background:linear-gradient(145deg,var(--dark),#2a2a2a);padding:20px;border-radius:15px;border:2px solid var(--gold);box-shadow:0 0 15px rgba(255,215,0,0.3);text-align:center;}
+.menu-item img{width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px;border:2px solid var(--gold);}
 .menu-item h3{color:var(--gold);font-size:1.4rem;}
 .price{color:var(--orange);font-size:1.5rem;font-weight:bold;margin-top:10px;}
 form{background:linear-gradient(145deg,var(--dark),#2a2a2a);padding:25px;border-radius:15px;border:2px solid var(--gold);}
 input,textarea,select{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:2px solid var(--gold);background:var(--black);color:var(--white);font-size:1rem;}
-footer{background:var(--dark);text-align:center;padding:25px;border-top:4px solid var(--gold);}
+footer{background:var(--dark);text-align:center;padding:30px;border-top:4px solid var(--gold);}
+.social a{color:var(--gold);margin:0 10px;text-decoration:none;font-size:1.2rem;}
 #ai-chat{position:fixed;bottom:20px;right:20px;background:linear-gradient(90deg,var(--gold),var(--orange));color:var(--black);padding:15px 20px;border-radius:50px;cursor:pointer;font-weight:bold;box-shadow:0 0 20px var(--gold);z-index:999;}
 #ai-box{display:none;position:fixed;bottom:80px;right:20px;width:300px;background:var(--dark);border:2px solid var(--gold);border-radius:15px;padding:15px;z-index:999;}
 .qr{width:200px;margin:20px auto;display:block;border:4px solid var(--gold);border-radius:10px;}
 .map{width:100%;height:300px;border:3px solid var(--gold);border-radius:15px;}
-.review{background:var(--dark);padding:15px;margin:10px 0;border-left:4px solid var(--gold);border-radius:8px;}
+.review{background:var(--dark);padding:15px;margin:10px 0;border-left:4px solid var(--gold);border-radius:8px;display:flex;gap:15px;align-items:center;}
+.review img{width:60px;height:60px;border-radius:50%;border:2px solid var(--gold);}
 #admin{display:none;}
+.hours{background:var(--dark);padding:15px;border-radius:10px;border:2px dashed var(--gold);text-align:center;margin:20px 0;}
 </style>
 </head>
 <body>
 
 <header id="home">
   <h1>👑 GYE NYAME HOT KENKEY</h1>
-  <p>Premium Ghanaian Kenkey • Fresh • Delicious • Trusted</p>
+  <p>Premium Ghanaian Kenkey • Fresh Daily • Delivered Hot</p>
 </header>
+
+<div class="trust-bar">
+  <span>✅ 100% Fresh Daily</span>
+  <span>✅ Fast Delivery</span>
+  <span>✅ 500+ Happy Customers</span>
+  <span>📞 0242 681 763</span>
+</div>
 
 <nav>
   <a href="#home">Home</a>
+  <a href="#about">About</a>
   <a href="#menu">Menu</a>
   <a href="#order">Order</a>
-  <a href="#delivery">Delivery</a>
   <a href="#location">Location</a>
   <a href="#reviews">Reviews</a>
   <a href="#admin-login">Admin</a>
@@ -61,10 +74,25 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
 <section id="home">
   <div class="container">
     <h2 class="section-title">Welcome to GYE NYAME</h2>
-    <p style="text-align:center;font-size:1.2rem;">The taste of Ghana. Hot, fresh kenkey with shito, fried fish and grilled tilapia. We deliver across Accra!</p>
+    <p style="text-align:center;font-size:1.2rem;">The taste of Ghana. Hot, fresh kenkey with shito, fried fish and grilled tilapia. Delivered across Accra in 45 minutes!</p>
     <div style="text-align:center;margin-top:25px;">
       <a href="#order" class="btn">Order Now</a>
     </div>
+    <div class="hours">
+      <h3 style="color:var(--gold)">🕒 Business Hours</h3>
+      <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About GYE NYAME</h2>
+    <p style="text-align:center;max-width:800px;margin:auto;font-size:1.1rem;">
+    <b>GYE NYAME</b> means "Except for God". Founded in 2024 in Accra, we are on a mission to serve the most authentic, 
+    hygienic, and delicious kenkey in Ghana. Every ball is hand-prepared, every fish is grilled fresh, and every order 
+    is delivered with love. Taste the tradition. Taste the luxury.
+    </p>
   </div>
 </section>
 
@@ -73,22 +101,26 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
     <h2 class="section-title">🍽️ Our Premium Menu</h2>
     <div class="menu-grid">
       <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1604908177453-7462950a6a3b?w=400" alt="Kenkey and Fish">
         <h3>Kenkey + Fried Fish + Shito</h3>
         <p>2 balls kenkey, fried tilapia, hot pepper, shito</p>
         <p class="price">GH₵35</p>
       </div>
       <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1599488327812-adae5c6fee71?w=400" alt="Grilled Tilapia">
         <h3>Kenkey + Grilled Tilapia</h3>
         <p>3 balls kenkey, grilled tilapia, onions, pepper sauce</p>
         <p class="price">GH₵50</p>
       </div>
       <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400" alt="Family Pack">
         <h3>Family Pack</h3>
         <p>10 balls kenkey + 3 tilapia + shito + 3 drinks</p>
         <p class="price">GH₵150</p>
       </div>
       <div class="menu-item">
-        <h3>Kenkey + Chicken</h3>
+        <img src="https://images.unsplash.com/photo-1606756790138-261d2b612f8a?w=400" alt="Kenkey and Chicken">
+        <h3>Kenkey + Grilled Chicken</h3>
         <p>2 balls kenkey, grilled chicken, shito, coleslaw</p>
         <p class="price">GH₵45</p>
       </div>
@@ -100,7 +132,7 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
   <div class="container">
     <h2 class="section-title">📲 Order Now - Delivered Hot</h2>
     <form id="orderForm">
-      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="name" placeholder="Your Full Name" required>
       <input type="tel" id="phone" placeholder="Your Phone Number" required>
       <select id="item" required>
         <option value="">Select Item</option>
@@ -109,9 +141,13 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
         <option>Kenkey + Chicken - GH₵45</option>
         <option>Family Pack - GH₵150</option>
       </select>
-      <textarea id="address" placeholder="Delivery Address in Accra" required></textarea>
+      <textarea id="address" placeholder="Full Delivery Address in Accra" required></textarea>
       <button type="submit" class="btn">Send Order to WhatsApp</button>
     </form>
+    <p style="text-align:center;margin-top:15px;">
+      <b>Payment:</b> Cash on Delivery | Mobile Money | Bank Transfer<br>
+      <b>Delivery Time:</b> 30 - 45 minutes
+    </p>
 
     <div style="text-align:center;margin-top:30px;">
       <h3>🔳 Scan to Order on WhatsApp</h3>
@@ -124,7 +160,7 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
 <section id="delivery">
   <div class="container">
     <h2 class="section-title">🚚 Delivery Areas</h2>
-    <p style="text-align:center;font-size:1.1rem;">We deliver to: Accra Central, Kaneshie, Dansoman, Circle, Tema, East Legon, Madina, Adenta</p>
+    <p style="text-align:center;font-size:1.1rem;">Accra Central, Kaneshie, Dansoman, Circle, Tema, East Legon, Madina, Adenta, Labone, Osu</p>
     <p style="text-align:center;color:var(--gold);margin-top:10px;">Delivery fee: GH₵10 - GH₵25 depending on location</p>
   </div>
 </section>
@@ -132,8 +168,8 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
 <section id="location">
   <div class="container">
     <h2 class="section-title">📍 Find Us in Accra</h2>
-    <p style="text-align:center;margin-bottom:20px;">GYE NYAME HOT KENKEY<br>Accra, Greater Accra Region, Ghana<br>Call: 0242 681 763</p>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5!2d-0.2!3d5.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMDAuMCJOIDDCsDEyJzAwLjAiVw!5e0!3m2!1sen!2sgh!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    <p style="text-align:center;margin-bottom:20px;">GYE NYAME HOT KENKEY<br>Accra, Greater Accra Region, Ghana<br>Call/WhatsApp: 0242 681 763</p>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5!2d-0.1870!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9b5b5b5b5b5b%3A0x0!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
 
@@ -141,13 +177,16 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
   <div class="container">
     <h2 class="section-title">⭐ Customer Reviews</h2>
     <div class="review">
-      <p>"Best kenkey in Accra! The shito is fire 🔥 Fast delivery too" - Ama K.</p>
+      <img src="https://i.pravatar.cc/60?img=1" alt="Customer">
+      <div><p>"Best kenkey in Accra! The shito is fire 🔥 Fast delivery too" <br><b>- Ama K.</b></p></div>
     </div>
     <div class="review">
-      <p>"GYE NYAME never disappoints. Hot and delicious every time" - Kofi M.</p>
+      <img src="https://i.pravatar.cc/60?img=2" alt="Customer">
+      <div><p>"GYE NYAME never disappoints. Hot and delicious every time" <br><b>- Kofi M.</b></p></div>
     </div>
     <div class="review">
-      <p>"Luxury taste. Worth every pesewa. Family pack is perfect" - Adjoa B.</p>
+      <img src="https://i.pravatar.cc/60?img=3" alt="Customer">
+      <div><p>"Luxury taste. Worth every pesewa. Family pack is perfect" <br><b>- Adjoa B.</b></p></div>
     </div>
   </div>
 </section>
@@ -180,7 +219,14 @@ footer{background:var(--dark);text-align:center;padding:25px;border-top:4px soli
 </div>
 
 <footer>
-  <p>© 2026 GYE NYAME HOT KENKEY. All Rights Reserved. | Luxury Taste of Ghana 🇬🇭</p>
+  <div class="social">
+    <a href="#">Facebook</a> | 
+    <a href="#">Instagram</a> | 
+    <a href="#">TikTok</a>
+  </div>
+  <p style="margin:15px 0;">Business Registration: BN-XXXX | Hygienically Prepared</p>
+  <p>© 2026 GYE NYAME HOT KENKEY. All Rights Reserved. | Accra, Ghana 🇬🇭</p>
+  <p>Call/WhatsApp: 0242 681 763</p>
 </footer>
 
 <script>
@@ -195,7 +241,7 @@ document.getElementById('loginForm').addEventListener('submit',function(e){
   }else{ alert('Wrong details'); }
 });
 
-// Order to WhatsApp - YOUR NUMBER
+// Order to WhatsApp
 document.getElementById('orderForm').addEventListener('submit',function(e){
   e.preventDefault();
   const name=document.getElementById('name').value;
