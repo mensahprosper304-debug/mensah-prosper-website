@@ -3,63 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYE NYAME HOTE KENKEY - ACCRA SPINTEX KASAPEREKO JUNCTION</title>
+<title>GYE NYAME HOTE KENKEY - ADMIN DASHBOARD</title>
 <style>
   *{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
   body{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); min-height:100vh}
   
   /* LOGIN PAGE */
   .login-container{display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px}
-  .login-box{background:white; padding:35px; border-radius:20px; width:100%; max-width:400px; box-shadow:0 10px 40px rgba(0,0,0,0.3)}
-  .login-box h1{color:#D32F2F; text-align:center; margin-bottom:10px}
-  .login-box p{text-align:center; margin-bottom:20px; color:#666}
+  .login-box{background:white; padding:35px; border-radius:20px; width:100%; max-width:420px; box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+  .login-box h1{color:#D32F2F; text-align:center; margin-bottom:5px}
+  .login-box .subtitle{text-align:center; color:#666; margin-bottom:20px; font-size:14px}
   .input-group{margin-bottom:15px}
   .input-group label{display:block; margin-bottom:5px; font-weight:bold; color:#8B4513}
-  .input-group input{width:100%; padding:14px; border:2px solid #FFEFD5; border-radius:10px; font-size:16px}
-  .login-btn{width:100%; padding:16px; background:linear-gradient(90deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50px; font-size:18px; font-weight:bold; cursor:pointer; margin-top:10px}
+  .input-group input, .input-group select, .input-group textarea{width:100%; padding:14px; border:2px solid #FFEFD5; border-radius:10px; font-size:16px}
+  .login-btn{width:100%; padding:16px; background:linear-gradient(90deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50px; font-size:18px; font-weight:bold; cursor:pointer}
   .switch{text-align:center; margin-top:15px; color:#666}
-  .switch a{color:#D32F2F; font-weight:bold; cursor:pointer; text-decoration:none}
+  .switch a{color:#D32F2F; font-weight:bold; cursor:pointer}
   .hidden{display:none}
   
-  /* MAIN APP */
+  /* ADMIN PANEL */
+  .admin-panel{display:none; padding:20px; background:#f5f5f5; min-height:100vh}
+  .admin-header{background:linear-gradient(90deg,#000,#8B4513); color:#FFC107; padding:20px; border-radius:15px; margin-bottom:20px; text-align:center}
+  .admin-header h1{font-size:28px}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-bottom:20px}
+  .stat-card{background:white; padding:20px; border-radius:15px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+  .stat-card h3{color:#666; font-size:14px}
+  .stat-card p{color:#D32F2F; font-size:32px; font-weight:bold}
+  
+  .dashboard-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+  .card{background:white; padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+  .card h2{color:#D32F2F; border-bottom:3px solid #FFC107; padding-bottom:10px; margin-bottom:15px}
+  .order-item{border-left:5px solid #25D366; padding:12px; margin:10px 0; background:#E8F5E9; border-radius:8px}
+  .order-item button{background:#D32F2F; color:white; border:none; padding:8px 12px; border-radius:8px; margin-right:8px; cursor:pointer; margin-top:8px}
+  .message-item{border-left:5px solid #FF6B00; padding:12px; margin:10px 0; background:#FFF0E0; border-radius:8px}
+  .logout-btn{position:fixed; top:20px; right:20px; background:#000; color:#FFC107; padding:10px 20px; border:none; border-radius:20px; cursor:pointer; font-weight:bold}
+  
+  /* CUSTOMER APP */
   .app{display:none}
-  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:50px 20px; border-bottom:8px solid #FFC107; position:relative}
-  .hero h1{font-size:34px; text-shadow:2px 2px 4px #000}
-  .logout{position:absolute; top:15px; right:15px; background:#000; color:#FFC107; padding:8px 15px; border-radius:20px; border:none; cursor:pointer; font-weight:bold}
+  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:40px 20px}
+  .btn{display:block; width:90%; max-width:350px; padding:18px; margin:12px auto; border-radius:50px; font-weight:bold; text-decoration:none; font-size:20px; text-align:center; background:linear-gradient(90deg,#25D366,#128C7E); color:white; border:none; cursor:pointer}
+  .section{padding:30px 20px; max-width:800px; margin:auto}
+  .menu-card{background:white; padding:15px; margin:15px 0; border-radius:15px; display:flex; justify-content:space-between; border-left:6px solid #FF6B00}
+  .price{color:#D32F2F; font-size:22px; font-weight:bold}
+  .order-form{background:white; padding:25px; border-radius:15px}
   
-  .btn{display:block; width:90%; max-width:350px; padding:18px; margin:12px auto; border-radius:50px; font-weight:bold; text-decoration:none; font-size:20px; text-align:center}
-  .btn-wa{background:linear-gradient(90deg,#25D366,#128C7E); color:white}
-  .btn-call{background:linear-gradient(90deg,#000,#333); color:#FFC107}
-  .hero-img{width:100%; max-width:500px; border-radius:20px; margin-top:20px; border:5px solid #FFC107}
-  
-  .section{padding:40px 20px; max-width:800px; margin:auto}
-  .section h2{color:#D32F2F; border-bottom:4px solid #FFC107; display:inline-block; margin-bottom:20px; font-size:28px}
-  .menu-card{background:linear-gradient(135deg,white,#FFF0E0); border-left:8px solid #FF6B00; padding:18px; margin:18px 0; border-radius:15px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 5px 15px rgba(0,0,0,0.1)}
-  .menu-card img{width:110px; height:110px; border-radius:12px; border:3px solid #FFC107; object-fit:cover}
-  .price{color:#D32F2F; font-size:24px; font-weight:bold}
-  .review{background:linear-gradient(135deg,white,#E8F5E9); padding:18px; border-radius:15px; margin:15px 0; border-left:5px solid #25D366}
-  .contact-box{background:linear-gradient(135deg,#8B4513,#D32F2F); color:white; padding:25px; border-radius:15px; text-align:center}
-  
-  /* MAP SECTION */
-  .map-container{border-radius:15px; overflow:hidden; border:5px solid #FFC107; box-shadow:0 6px 20px rgba(0,0,0,0.2)}
-  .map-container iframe{width:100%; height:350px; border:none}
-  
-  .footer{background:linear-gradient(90deg,#222,#8B4513); color:#FFC107; text-align:center; padding:25px}
-  
-  /* AI ASSISTANT - BOTTOM RIGHT */
-  .chat-btn{position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50%; width:65px; height:65px; font-size:32px; cursor:pointer; box-shadow:0 6px 20px rgba(211,47,47,0.6); z-index:999}
-  .chat-box{display:none; position:fixed; bottom:90px; right:20px; width:320px; height:420px; background:white; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.4); z-index:999; flex-direction:column}
-  .chat-header{background:linear-gradient(90deg,#FF6B00,#D32F2F); color:white; padding:15px; border-radius:20px 20px 0 0; font-weight:bold}
-  .chat-body{flex:1; padding:15px; overflow-y:auto; font-size:14px}
-  .chat-msg{background:#FFEFD5; padding:10px; border-radius:12px; margin:8px 0}
-  .chat-input{display:flex; border-top:1px solid #ddd}
-  .chat-input input{flex:1; border:none; padding:12px; border-radius:0 0 0 20px; outline:none}
-  .chat-input button{background:#FF6B00; color:white; border:none; padding:12px 18px; border-radius:0 0 20px 0; cursor:pointer}
-  
-  @media(max-width:600px){
-    .menu-card{flex-direction:column; text-align:center}
-    .chat-box{width:90%; right:5%}
-  }
+  @media(max-width:900px){.dashboard-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -68,198 +56,279 @@
 <div class="login-container" id="loginPage">
   <div class="login-box">
     <h1>🍛 GYE NYAME HOTE KENKEY</h1>
-    <p id="loginTitle">Login to Order</p>
+    <p class="subtitle" id="loginSubtitle">Customer Login</p>
     
-    <div id="loginForm">
-      <div class="input-group">
-        <label>Phone Number</label>
-        <input type="tel" id="loginPhone" placeholder="0242681763">
-      </div>
-      <div class="input-group">
-        <label>Password</label>
-        <input type="password" id="loginPass" placeholder="Enter password">
-      </div>
-      <button class="login-btn" onclick="login()">Login</button>
-      <p class="switch">New here? <a onclick="showSignup()">Sign Up</a></p>
+    <div id="customerLogin">
+      <div class="input-group"><label>Phone Number</label><input type="tel" id="loginPhone" placeholder="0242681763"></div>
+      <div class="input-group"><label>Password</label><input type="password" id="loginPass"></div>
+      <button class="login-btn" onclick="customerLogin()">Login</button>
+      <p class="switch">New customer? <a onclick="showCustomerSignup()">Sign Up</a></p>
+      <p class="switch" style="margin-top:10px"><a onclick="showAdminLogin()">Login as Admin</a></p>
     </div>
     
-    <div id="signupForm" class="hidden">
-      <div class="input-group">
-        <label>Full Name</label>
-        <input type="text" id="signupName" placeholder="Your Name">
-      </div>
-      <div class="input-group">
-        <label>Phone Number</label>
-        <input type="tel" id="signupPhone" placeholder="0242681763">
-      </div>
-      <div class="input-group">
-        <label>Password</label>
-        <input type="password" id="signupPass" placeholder="Create password">
-      </div>
-      <button class="login-btn" onclick="signup()">Sign Up</button>
-      <p class="switch">Already have account? <a onclick="showLogin()">Login</a></p>
+    <div id="customerSignup" class="hidden">
+      <div class="input-group"><label>Full Name</label><input type="text" id="signupName"></div>
+      <div class="input-group"><label>Phone Number</label><input type="tel" id="signupPhone"></div>
+      <div class="input-group"><label>Password</label><input type="password" id="signupPass"></div>
+      <button class="login-btn" onclick="customerSignup()">Create Account</button>
+      <p class="switch">Already have account? <a onclick="showCustomerLogin()">Login</a></p>
+    </div>
+    
+    <div id="adminLogin" class="hidden">
+      <p style="text-align:center; color:#D32F2F; font-weight:bold; margin-bottom:10px">🔒 ADMIN ONLY</p>
+      <div class="input-group"><label>Admin Username</label><input type="text" id="adminUser" placeholder="admin"></div>
+      <div class="input-group"><label>Admin Password</label><input type="password" id="adminPass" placeholder="admin123"></div>
+      <button class="login-btn" onclick="adminLogin()">Login to Dashboard</button>
+      <p class="switch"><a onclick="showCustomerLogin()">Back to Customer</a></p>
     </div>
   </div>
 </div>
 
-<!-- MAIN APP -->
-<div class="app" id="mainApp">
-  <button class="logout" onclick="logout()">Logout</button>
+<!-- ADMIN DASHBOARD -->
+<div class="admin-panel" id="adminPanel">
+  <button class="logout-btn" onclick="logout()">Logout</button>
+  <div class="admin-header">
+    <h1>👑 MAMA JOYCE ADMIN PANEL</h1>
+    <p>GYE NYAME HOTE KENKEY - ACCRA SPINTEX</p>
+  </div>
   
-  <!-- HERO -->
+  <div class="stats">
+    <div class="stat-card"><h3>Today's Visitors</h3><p id="visitorCount">0</p></div>
+    <div class="stat-card"><h3>New Orders</h3><p id="orderCount">0</p></div>
+    <div class="stat-card"><h3>Total Customers</h3><p id="customerCount">0</p></div>
+  </div>
+  
+  <div class="dashboard-grid">
+    <div class="card">
+      <h2>📦 New Orders</h2>
+      <div id="ordersList">No new orders yet</div>
+    </div>
+    
+    <div class="card">
+      <h2>💬 Customer Messages</h2>
+      <div id="messagesList">No messages yet</div>
+    </div>
+    
+    <div class="card">
+      <h2>👥 Customer Accounts</h2>
+      <div id="customersList">No customers yet</div>
+    </div>
+    
+    <div class="card">
+      <h2>📊 Quick Actions</h2>
+      <button class="login-btn" onclick="alert('WhatsApp: 0242681763')">Contact Customer</button>
+      <button class="login-btn" style="background:#25D366; margin-top:10px" onclick="clearAllData()">Clear All Data</button>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOMER APP -->
+<div class="app" id="customerApp">
   <div class="hero">
     <h1>🍛 GYE NYAME HOTE KENKEY</h1>
     <p>Fresh. Soft. Made Daily in ACCRA SPINTEX</p>
-    <p>📍 KASAPEREKO JUNCTION | 🕐 6am - 8pm Daily</p><br>
-    <a href="https://wa.me/233242681763?text=Hi%20GYE%20NYAME%20HOTE%20KENKEY,%20I%20want%20to%20order%20kenkey" class="btn btn-wa">💚 Order on WhatsApp</a>
-    <a href="tel:0242681763" class="btn btn-call">📞 Call 0242681763</a>
-    <img src="kenkey-hero.jpg" class="hero-img" alt="Hot GYE NYAME HOTE KENKEY">
+    <button class="btn" onclick="logout()">Logout</button>
   </div>
-
-  <!-- MENU -->
+  
   <div class="section">
-    <h2>📍 Our Kenkey Menu</h2>
-    <div class="menu-card">
-      <div><b>Kenkey Only</b><br>Soft and fresh<br><span class="price">GH¢5</span></div>
-      <img src="kenkey1.jpg" alt="Kenkey">
-    </div>
-    <div class="menu-card">
-      <div><b>Kenkey + Chicken Back</b><br>Pepper + onions + shito<br><span class="price">GH¢15</span></div>
-      <img src="kenkey2.jpg" alt="Chicken">
-    </div>
-    <div class="menu-card">
-      <div><b>Kenkey + Normal Fish</b><br>Fried fish + spicy pepper<br><span class="price">GH¢20</span></div>
-      <img src="kenkey3.jpg" alt="Fish">
-    </div>
-    <div class="menu-card">
-      <div><b>Kenkey + Red Fish</b><br>Big red fish + sauce<br><span class="price">GH¢30</span></div>
-      <img src="kenkey4.jpg" alt="Red Fish">
-    </div>
+    <h2 style="color:white; text-align:center">📍 Our Menu</h2>
+    <div class="menu-card"><div><b>Kenkey Only</b><br>Soft and fresh</div><div class="price">GH¢5</div></div>
+    <div class="menu-card"><div><b>Kenkey + Chicken Back</b><br>Pepper + shito</div><div class="price">GH¢15</div></div>
+    <div class="menu-card"><div><b>Kenkey + Normal Fish</b><br>Fried fish</div><div class="price">GH¢20</div></div>
+    <div class="menu-card"><div><b>Kenkey + Red Fish</b><br>Big red fish</div><div class="price">GH¢30</div></div>
   </div>
-
-  <!-- REVIEWS -->
+  
   <div class="section">
-    <h2>⭐ Customer Reviews</h2>
-    <div class="review">"Best kenkey in Kasapereko! Soft and pepper is fire" <b>- Ama K.</b></div>
-    <div class="review">"Ordered on WhatsApp, delivered hot in 30mins" <b>- Kofi D.</b></div>
-  </div>
-
-  <!-- MAP SECTION - NEW -->
-  <div class="section">
-    <h2>📍 Find Us At</h2>
-    <p style="text-align:center; margin-bottom:15px; font-size:18px; font-weight:bold;">
-      ACCRA SPINTEX, KASAPEREKO JUNCTION
-    </p>
-    <div class="map-container">
-      <!-- GOOGLE MAP EMBED -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8!2d-0.15!3d5.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMDAuMCJOIDDCsDA5JzAwLjAiVw!5e0!3m2!1sen!2sgh!4v1234567890" 
-      allowfullscreen="" loading="lazy">
-      </iframe>
+    <h2 style="color:white; text-align:center">📝 Place Your Order</h2>
+    <div class="order-form">
+      <div class="input-group"><label>Your Name</label><input type="text" id="orderName"></div>
+      <div class="input-group"><label>Phone Number</label><input type="tel" id="orderPhone"></div>
+      <div class="input-group">
+        <label>Select Order</label>
+        <select id="orderItem">
+          <option>Kenkey Only - GH¢5</option>
+          <option>Kenkey + Chicken Back - GH¢15</option>
+          <option>Kenkey + Normal Fish - GH¢20</option>
+          <option>Kenkey + Red Fish - GH¢30</option>
+        </select>
+      </div>
+      <div class="input-group"><label>Delivery Location</label><input type="text" id="orderLocation" placeholder="ACCRA SPINTEX, KASAPREKO"></div>
+      <div class="input-group">
+        <label>Payment Method</label>
+        <select id="orderPayment">
+          <option>Cash on Delivery</option>
+          <option>Mobile Money - 0242681763</option>
+        </select>
+      </div>
+      <div class="input-group"><label>Special Message</label><textarea id="orderMessage" rows="3" placeholder="Please deliver fast"></textarea></div>
+      <button class="btn" onclick="submitOrder()">Submit Order</button>
     </div>
-    <p style="text-align:center; margin-top:10px;">
-      <a href="https://maps.google.com/?q=ACCRA+SPINTEX+KASAPEREKO+JUNCTION" target="_blank" style="color:#D32F2F; font-weight:bold;">Click to Open in Google Maps</a>
-    </p>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>📞 Order & Contact</h2>
-    <div class="contact-box">
-      <p><b>📍 Location:</b> ACCRA SPINTEX, KASAPEREKO JUNCTION</p>
-      <p><b>🕐 Hours:</b> Monday - Saturday | 6am - 8pm</p>
-      <p><b>💚 WhatsApp:</b> 0242681763</p>
-      <p><b>📞 Call:</b> 0242681763</p>
-      <p><b>💰 MOMO:</b> 0242681763</p>
-    </div>
-  </div>
-
-  <div class="footer">
-    © 2026 GYE NYAME HOTE KENKEY - ACCRA SPINTEX KASAPEREKO JUNCTION 🇬🇭
-  </div>
-</div>
-
-<!-- AI ASSISTANT - BOTTOM RIGHT -->
-<button class="chat-btn" onclick="toggleChat()">🤖</button>
-<div class="chat-box" id="chatBox">
-  <div class="chat-header">Gye Nyame AI Helper</div>
-  <div class="chat-body" id="chatBody">
-    <div class="chat-msg">Hi! I’m Gye Nyame AI 👋<br>
-    I can help you:<br>
-    1. See Menu & Prices<br>
-    2. Place an Order<br>
-    3. Report a Problem<br>
-    4. Find Our Location<br><br>
-    What do you need help with?</div>
-  </div>
-  <div class="chat-input">
-    <input type="text" id="userInput" placeholder="Type here..." onkeypress="if(event.key==='Enter')sendMsg()">
-    <button onclick="sendMsg()">Send</button>
   </div>
 </div>
 
 <script>
-// LOGIN SYSTEM
-function showSignup(){
-  document.getElementById('loginForm').classList.add('hidden');
-  document.getElementById('signupForm').classList.remove('hidden');
-  document.getElementById('loginTitle').innerText = "Create Account";
+// DATA STORAGE
+let orders = JSON.parse(localStorage.getItem('orders')) || [];
+let customers = JSON.parse(localStorage.getItem('customers')) || [];
+let messages = JSON.parse(localStorage.getItem('messages')) || [];
+let visitors = parseInt(localStorage.getItem('visitors')) || 0;
+
+// VISITOR COUNT
+visitors++;
+localStorage.setItem('visitors', visitors);
+
+// PAGE SWITCHING
+function showCustomerSignup(){
+  document.getElementById('customerLogin').classList.add('hidden');
+  document.getElementById('customerSignup').classList.remove('hidden');
+  document.getElementById('loginSubtitle').innerText = "Create Customer Account";
 }
-function showLogin(){
-  document.getElementById('signupForm').classList.add('hidden');
-  document.getElementById('loginForm').classList.remove('hidden');
-  document.getElementById('loginTitle').innerText = "Login to Order";
+function showCustomerLogin(){
+  document.getElementById('customerSignup').classList.add('hidden');
+  document.getElementById('adminLogin').classList.add('hidden');
+  document.getElementById('customerLogin').classList.remove('hidden');
+  document.getElementById('loginSubtitle').innerText = "Customer Login";
 }
-function signup(){
+function showAdminLogin(){
+  document.getElementById('customerLogin').classList.add('hidden');
+  document.getElementById('adminLogin').classList.remove('hidden');
+  document.getElementById('loginSubtitle').innerText = "Admin Login";
+}
+
+// CUSTOMER SIGNUP/LOGIN
+function customerSignup(){
   let name = document.getElementById('signupName').value;
   let phone = document.getElementById('signupPhone').value;
   let pass = document.getElementById('signupPass').value;
   if(name && phone && pass){
-    localStorage.setItem('user', JSON.stringify({name, phone, pass}));
+    customers.push({name, phone, pass});
+    localStorage.setItem('customers', JSON.stringify(customers));
     alert("Account created! Now login");
-    showLogin();
+    showCustomerLogin();
   } else { alert("Fill all fields") }
 }
-function login(){
+function customerLogin(){
   let phone = document.getElementById('loginPhone').value;
   let pass = document.getElementById('loginPass').value;
-  let user = JSON.parse(localStorage.getItem('user'));
-  if(user && user.phone === phone && user.pass === pass){
-    sessionStorage.setItem('loggedIn', 'true');
+  let user = customers.find(c => c.phone === phone && c.pass === pass);
+  if(user){
+    sessionStorage.setItem('loggedIn', 'customer');
     document.getElementById('loginPage').style.display = 'none';
-    document.getElementById('mainApp').style.display = 'block';
+    document.getElementById('customerApp').style.display = 'block';
+    document.getElementById('orderName').value = user.name;
+    document.getElementById('orderPhone').value = user.phone;
   } else { alert("Wrong phone or password") }
 }
+
+// ADMIN LOGIN - ONLY YOU
+function adminLogin(){
+  let user = document.getElementById('adminUser').value;
+  let pass = document.getElementById('adminPass').value;
+  if(user === 'admin' && pass === 'admin123'){ // CHANGE THIS PASSWORD
+    sessionStorage.setItem('loggedIn', 'admin');
+    document.getElementById('loginPage').style.display = 'none';
+    document.getElementById('adminPanel').style.display = 'block';
+    loadDashboard();
+  } else { alert("Wrong admin details") }
+}
+
 function logout(){
   sessionStorage.removeItem('loggedIn');
   document.getElementById('loginPage').style.display = 'flex';
-  document.getElementById('mainApp').style.display = 'none';
-}
-if(sessionStorage.getItem('loggedIn')){
-  document.getElementById('loginPage').style.display = 'none';
-  document.getElementById('mainApp').style.display = 'block';
+  document.getElementById('adminPanel').style.display = 'none';
+  document.getElementById('customerApp').style.display = 'none';
 }
 
-// AI ASSISTANT
-function toggleChat(){
-  var box = document.getElementById('chatBox');
-  box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+// SUBMIT ORDER
+function submitOrder(){
+  let name = document.getElementById('orderName').value;
+  let phone = document.getElementById('orderPhone').value;
+  let item = document.getElementById('orderItem').value;
+  let location = document.getElementById('orderLocation').value;
+  let payment = document.getElementById('orderPayment').value;
+  let message = document.getElementById('orderMessage').value;
+  
+  if(name && phone && location){
+    let newOrder = {id: Date.now(), name, phone, item, location, payment, message, time: new Date().toLocaleString()};
+    orders.push(newOrder);
+    localStorage.setItem('orders', JSON.stringify(orders));
+    if(message) {
+      messages.push({from: name, text: message, time: new Date().toLocaleString()});
+      localStorage.setItem('messages', JSON.stringify(messages));
+    }
+    alert("Order sent! We will contact you soon on WhatsApp");
+    document.getElementById('orderMessage').value = '';
+  } else { alert("Fill Name, Phone and Location") }
 }
-function sendMsg(){
-  var input = document.getElementById('userInput');
-  var body = document.getElementById('chatBody');
-  var msg = input.value;
-  if(msg.trim() === '') return;
-  body.innerHTML += `<div class="chat-msg" style="background:#D32F2F; color:white; text-align:right">${msg}</div>`;
-  input.value = '';
-  setTimeout(()=>{
-    let reply = "For quick help, WhatsApp 0242681763. Or type: 1-Menu 2-Order 3-Report 4-Location";
-    if(msg.includes('1')) reply = "Menu: Kenkey GH¢5 | Chicken GH¢15 | Normal Fish GH¢20 | Red Fish GH¢30";
-    if(msg.includes('2')) reply = "Click the green WhatsApp button above to order!";
-    if(msg.includes('3')) reply = "Sorry 😔 Tell me your problem. Or WhatsApp 0242681763 and we will fix it.";
-    if(msg.includes('4')) reply = "We are at ACCRA SPINTEX, KASAPEREKO JUNCTION. Check the map above or click 'Open in Google Maps'";
-    body.innerHTML += `<div class="chat-msg">${reply}</div>`;
-    body.scrollTop = body.scrollHeight;
-  }, 600);
+
+// LOAD ADMIN DASHBOARD
+function loadDashboard(){
+  document.getElementById('visitorCount').innerText = visitors;
+  document.getElementById('orderCount').innerText = orders.length;
+  document.getElementById('customerCount').innerText = customers.length;
+  
+  // ORDERS
+  let ordersHTML = '';
+  if(orders.length === 0) ordersHTML = 'No new orders yet';
+  else {
+    orders.slice().reverse().forEach(o => {
+      ordersHTML += `<div class="order-item">
+        <b>${o.name}</b> - ${o.item}<br>
+        <small>📞 ${o.phone} | 📍 ${o.location}</small><br>
+        <small>💰 ${o.payment} | 🕐 ${o.time}</small><br>
+        <button onclick="approveOrder(${o.id})">Approve Order</button>
+        <button onclick="contactCustomer('${o.phone}')">Contact</button>
+      </div>`;
+    });
+  }
+  document.getElementById('ordersList').innerHTML = ordersHTML;
+  
+  // MESSAGES
+  let msgHTML = '';
+  if(messages.length === 0) msgHTML = 'No messages yet';
+  else {
+    messages.slice().reverse().forEach(m => {
+      msgHTML += `<div class="message-item"><b>${m.from}:</b> "${m.text}"<br><small>${m.time}</small></div>`;
+    });
+  }
+  document.getElementById('messagesList').innerHTML = msgHTML;
+  
+  // CUSTOMERS
+  let custHTML = '';
+  if(customers.length === 0) custHTML = 'No customers yet';
+  else {
+    customers.forEach(c => {
+      custHTML += `<div class="order-item"><b>${c.name}</b><br><small>${c.phone}</small></div>`;
+    });
+  }
+  document.getElementById('customersList').innerHTML = custHTML;
+}
+
+function approveOrder(id){
+  alert("Order Approved! WhatsApp the customer now: 0242681763");
+  orders = orders.filter(o => o.id !== id);
+  localStorage.setItem('orders', JSON.stringify(orders));
+  loadDashboard();
+}
+function contactCustomer(phone){
+  window.open(`https://wa.me/233${phone.substring(1)}`, '_blank');
+}
+function clearAllData(){
+  if(confirm("Delete all orders and messages?")){
+    localStorage.clear(); location.reload();
+  }
+}
+
+// AUTO LOGIN CHECK
+let loggedIn = sessionStorage.getItem('loggedIn');
+if(loggedIn === 'admin'){
+  document.getElementById('loginPage').style.display = 'none';
+  document.getElementById('adminPanel').style.display = 'block';
+  loadDashboard();
+}
+if(loggedIn === 'customer'){
+  document.getElementById('loginPage').style.display = 'none';
+  document.getElementById('customerApp').style.display = 'block';
 }
 </script>
 
