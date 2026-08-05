@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYE NYAME HOTE KENKEY - Login</title>
+<title>GYE NYAME HOTE KENKEY - ACCRA SPINTEX KASAPEREKO JUNCTION</title>
 <style>
   *{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
   body{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); min-height:100vh}
@@ -23,7 +23,7 @@
   
   /* MAIN APP */
   .app{display:none}
-  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:50px 20px; border-bottom:8px solid #FFC107}
+  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:50px 20px; border-bottom:8px solid #FFC107; position:relative}
   .hero h1{font-size:34px; text-shadow:2px 2px 4px #000}
   .logout{position:absolute; top:15px; right:15px; background:#000; color:#FFC107; padding:8px 15px; border-radius:20px; border:none; cursor:pointer; font-weight:bold}
   
@@ -33,12 +33,18 @@
   .hero-img{width:100%; max-width:500px; border-radius:20px; margin-top:20px; border:5px solid #FFC107}
   
   .section{padding:40px 20px; max-width:800px; margin:auto}
-  .section h2{color:#D32F2F; border-bottom:4px solid #FFC107; display:inline-block; margin-bottom:20px}
-  .menu-card{background:linear-gradient(135deg,white,#FFF0E0); border-left:8px solid #FF6B00; padding:18px; margin:18px 0; border-radius:15px; display:flex; justify-content:space-between; align-items:center}
-  .menu-card img{width:110px; height:110px; border-radius:12px; border:3px solid #FFC107}
+  .section h2{color:#D32F2F; border-bottom:4px solid #FFC107; display:inline-block; margin-bottom:20px; font-size:28px}
+  .menu-card{background:linear-gradient(135deg,white,#FFF0E0); border-left:8px solid #FF6B00; padding:18px; margin:18px 0; border-radius:15px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+  .menu-card img{width:110px; height:110px; border-radius:12px; border:3px solid #FFC107; object-fit:cover}
   .price{color:#D32F2F; font-size:24px; font-weight:bold}
+  .review{background:linear-gradient(135deg,white,#E8F5E9); padding:18px; border-radius:15px; margin:15px 0; border-left:5px solid #25D366}
   .contact-box{background:linear-gradient(135deg,#8B4513,#D32F2F); color:white; padding:25px; border-radius:15px; text-align:center}
-  .footer{background:#222; color:#FFC107; text-align:center; padding:20px}
+  
+  /* MAP SECTION */
+  .map-container{border-radius:15px; overflow:hidden; border:5px solid #FFC107; box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+  .map-container iframe{width:100%; height:350px; border:none}
+  
+  .footer{background:linear-gradient(90deg,#222,#8B4513); color:#FFC107; text-align:center; padding:25px}
   
   /* AI ASSISTANT - BOTTOM RIGHT */
   .chat-btn{position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50%; width:65px; height:65px; font-size:32px; cursor:pointer; box-shadow:0 6px 20px rgba(211,47,47,0.6); z-index:999}
@@ -49,6 +55,11 @@
   .chat-input{display:flex; border-top:1px solid #ddd}
   .chat-input input{flex:1; border:none; padding:12px; border-radius:0 0 0 20px; outline:none}
   .chat-input button{background:#FF6B00; color:white; border:none; padding:12px 18px; border-radius:0 0 20px 0; cursor:pointer}
+  
+  @media(max-width:600px){
+    .menu-card{flex-direction:column; text-align:center}
+    .chat-box{width:90%; right:5%}
+  }
 </style>
 </head>
 <body>
@@ -91,18 +102,18 @@
   </div>
 </div>
 
-<!-- MAIN APP - ONLY SHOWS AFTER LOGIN -->
+<!-- MAIN APP -->
 <div class="app" id="mainApp">
   <button class="logout" onclick="logout()">Logout</button>
   
   <!-- HERO -->
   <div class="hero">
     <h1>🍛 GYE NYAME HOTE KENKEY</h1>
-    <p>Fresh. Soft. Made Daily in ACCRA-KASAPEREKO</p>
-    <p>📍 ACCRA-KASAPEREKO | 🕐 6am - 8pm Daily</p><br>
+    <p>Fresh. Soft. Made Daily in ACCRA SPINTEX</p>
+    <p>📍 KASAPEREKO JUNCTION | 🕐 6am - 8pm Daily</p><br>
     <a href="https://wa.me/233242681763?text=Hi%20GYE%20NYAME%20HOTE%20KENKEY,%20I%20want%20to%20order%20kenkey" class="btn btn-wa">💚 Order on WhatsApp</a>
     <a href="tel:0242681763" class="btn btn-call">📞 Call 0242681763</a>
-    <img src="kenkey-hero.jpg" class="hero-img" alt="Hot Kenkey">
+    <img src="kenkey-hero.jpg" class="hero-img" alt="Hot GYE NYAME HOTE KENKEY">
   </div>
 
   <!-- MENU -->
@@ -126,17 +137,45 @@
     </div>
   </div>
 
+  <!-- REVIEWS -->
+  <div class="section">
+    <h2>⭐ Customer Reviews</h2>
+    <div class="review">"Best kenkey in Kasapereko! Soft and pepper is fire" <b>- Ama K.</b></div>
+    <div class="review">"Ordered on WhatsApp, delivered hot in 30mins" <b>- Kofi D.</b></div>
+  </div>
+
+  <!-- MAP SECTION - NEW -->
+  <div class="section">
+    <h2>📍 Find Us At</h2>
+    <p style="text-align:center; margin-bottom:15px; font-size:18px; font-weight:bold;">
+      ACCRA SPINTEX, KASAPEREKO JUNCTION
+    </p>
+    <div class="map-container">
+      <!-- GOOGLE MAP EMBED -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8!2d-0.15!3d5.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMDAuMCJOIDDCsDA5JzAwLjAiVw!5e0!3m2!1sen!2sgh!4v1234567890" 
+      allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+    <p style="text-align:center; margin-top:10px;">
+      <a href="https://maps.google.com/?q=ACCRA+SPINTEX+KASAPEREKO+JUNCTION" target="_blank" style="color:#D32F2F; font-weight:bold;">Click to Open in Google Maps</a>
+    </p>
+  </div>
+
   <!-- CONTACT -->
   <div class="section">
     <h2>📞 Order & Contact</h2>
     <div class="contact-box">
-      <p><b>📍 ACCRA-KASAPEREKO</b></p>
-      <p><b>🕐 6am - 8pm Mon-Sat</b></p>
-      <p><b>💚 WhatsApp/Call/MOMO: 0242681763</b></p>
+      <p><b>📍 Location:</b> ACCRA SPINTEX, KASAPEREKO JUNCTION</p>
+      <p><b>🕐 Hours:</b> Monday - Saturday | 6am - 8pm</p>
+      <p><b>💚 WhatsApp:</b> 0242681763</p>
+      <p><b>📞 Call:</b> 0242681763</p>
+      <p><b>💰 MOMO:</b> 0242681763</p>
     </div>
   </div>
 
-  <div class="footer">© 2026 GYE NYAME HOTE KENKEY - ACCRA-KASAPEREKO 🇬🇭</div>
+  <div class="footer">
+    © 2026 GYE NYAME HOTE KENKEY - ACCRA SPINTEX KASAPEREKO JUNCTION 🇬🇭
+  </div>
 </div>
 
 <!-- AI ASSISTANT - BOTTOM RIGHT -->
@@ -149,7 +188,7 @@
     1. See Menu & Prices<br>
     2. Place an Order<br>
     3. Report a Problem<br>
-    4. Delivery Info<br><br>
+    4. Find Our Location<br><br>
     What do you need help with?</div>
   </div>
   <div class="chat-input">
@@ -159,7 +198,7 @@
 </div>
 
 <script>
-// LOGIN SYSTEM - SAVED IN BROWSER
+// LOGIN SYSTEM
 function showSignup(){
   document.getElementById('loginForm').classList.add('hidden');
   document.getElementById('signupForm').classList.remove('hidden');
@@ -185,16 +224,17 @@ function login(){
   let pass = document.getElementById('loginPass').value;
   let user = JSON.parse(localStorage.getItem('user'));
   if(user && user.phone === phone && user.pass === pass){
+    sessionStorage.setItem('loggedIn', 'true');
     document.getElementById('loginPage').style.display = 'none';
     document.getElementById('mainApp').style.display = 'block';
   } else { alert("Wrong phone or password") }
 }
 function logout(){
+  sessionStorage.removeItem('loggedIn');
   document.getElementById('loginPage').style.display = 'flex';
   document.getElementById('mainApp').style.display = 'none';
 }
-// Check if already logged in
-if(localStorage.getItem('user') && sessionStorage.getItem('loggedIn')){
+if(sessionStorage.getItem('loggedIn')){
   document.getElementById('loginPage').style.display = 'none';
   document.getElementById('mainApp').style.display = 'block';
 }
@@ -212,11 +252,11 @@ function sendMsg(){
   body.innerHTML += `<div class="chat-msg" style="background:#D32F2F; color:white; text-align:right">${msg}</div>`;
   input.value = '';
   setTimeout(()=>{
-    let reply = "For quick help, WhatsApp 0242681763. Or type: 1-Menu 2-Order 3-Report 4-Delivery";
+    let reply = "For quick help, WhatsApp 0242681763. Or type: 1-Menu 2-Order 3-Report 4-Location";
     if(msg.includes('1')) reply = "Menu: Kenkey GH¢5 | Chicken GH¢15 | Normal Fish GH¢20 | Red Fish GH¢30";
     if(msg.includes('2')) reply = "Click the green WhatsApp button above to order!";
     if(msg.includes('3')) reply = "Sorry 😔 Tell me your problem. Or WhatsApp 0242681763 and we will fix it.";
-    if(msg.includes('4')) reply = "We deliver in ACCRA-KASAPEREKO. Call 0242681763 to confirm.";
+    if(msg.includes('4')) reply = "We are at ACCRA SPINTEX, KASAPEREKO JUNCTION. Check the map above or click 'Open in Google Maps'";
     body.innerHTML += `<div class="chat-msg">${reply}</div>`;
     body.scrollTop = body.scrollHeight;
   }, 600);
