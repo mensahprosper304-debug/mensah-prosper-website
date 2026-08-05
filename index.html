@@ -1,108 +1,587 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GYE NYAME HOT KENKEY | Colourful Luxury</title>
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; script-src 'self'; frame-src https://www.openstreetmap.org https://www.google.com; connect-src 'self' https://wa.me">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0a;color:#F5F0E8;font-family:Inter,sans-serif;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:-1;background:
-radial-gradient(900px at 10% 10%, rgba(212,175,55,.28), transparent 60%),
-radial-gradient(800px at 90% 20%, rgba(196,30,58,.22), transparent 60%),
-radial-gradient(700px at 30% 90%, rgba(26,140,62,.20), transparent 60%),
-radial-gradient(600px at 80% 85%, rgba(255,122,0,.18), transparent 60%),
-#0a0a0a}
-.kente{height:10px;background:linear-gradient(90deg,#D4AF37 0 16%,#C41E3A 16% 32%,#1A8C3E 32% 48%,#FF7A00 48% 64%,#D4AF37 64% 80%,#C41E3A 80% 100%)}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 6%;border-bottom:1px solid #222;background:rgba(10,10,10,.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10}
-.logo{font-family:'Cormorant Garamond';letter-spacing:.5em;color:#D4AF37;font-size:18px}
-.hero{padding:90px 6% 70px}
-.badge{display:inline-block;border:1px solid #D4AF37;color:#D4AF37;padding:6px 14px;font-size:10px;letter-spacing:.3em}
-.hero h1{font-family:'Cormorant Garamond';font-size:clamp(44px,8vw,88px);line-height:.92;margin:18px 0}
-.hero h1 i{color:#D4AF37}
-.hero p{max-width:600px;opacity:.85;font-size:18px}
-.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
-.btn{padding:15px 28px;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.15em;cursor:pointer;border:0}
-.btn-gold{background:#D4AF37;color:#000} .btn-line{border:1px solid #333;color:#F5F0E8;background:transparent}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:20px 6% 60px}
-.card{background:rgba(22,22,22,.8);border:1px solid #222;padding:24px;border-left:6px solid #D4AF37;backdrop-filter:blur(6px)}
-.card:nth-child(2){border-left-color:#C41E3A} .card:nth-child(3){border-left-color:#1A8C3E} .card:nth-child(4){border-left-color:#FF7A00}
-.card h3{color:#D4AF37;font-family:'Cormorant Garamond';font-size:22px} .card b{color:#fff}
-.map-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:0;margin:0 6% 60px;border:1px solid #222;overflow:hidden;background:#151515}
-.map-wrap iframe{width:100%;height:360px;border:0;filter:grayscale(.2) contrast(1.1)}
-.map-info{padding:28px}
-footer{padding:30px 6%;background:#000;border-top:1px solid #222;text-align:center;font-size:11px;color:#888;letter-spacing:.1em}
-#ai{position:fixed;right:18px;bottom:18px;z-index:9999}
-#ai-btn{width:58px;height:58px;border-radius:50%;background:#D4AF37;color:#000;border:0;font-size:24px;cursor:pointer;box-shadow:0 10px 30px rgba(212,175,55,.4)}
-#ai-box{display:none;width:340px;height:420px;background:#111;border:1px solid #333;position:absolute;bottom:70px;right:0;flex-direction:column}
-#ai-box.open{display:flex}
-#ai-head{background:#000;color:#D4AF37;padding:12px;font-size:11px;letter-spacing:.2em;display:flex;justify-content:space-between}
-#ai-chat{flex:1;padding:12px;overflow:auto;font-size:13px}
-.m{margin:8px 0;padding:10px 14px;max-width:82%;line-height:1.4}
-.me{background:#D4AF37;color:#000;margin-left:auto;border-radius:16px 16px 2px 16px} .bot{background:#1e1e1e;border-radius:16px 16px 16px 2px}
-#ai-in{display:flex;border-top:1px solid #222} #ai-in input{flex:1;background:#0a0a0a;border:0;padding:14px;color:#fff;outline:none} #ai-in button{background:#D4AF37;border:0;padding:0 18px;font-weight:700}
-@media(max-width:800px){.map-wrap{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<div class="kente"></div>
-<header><div class="logo">GYE NYAME</div><div style="font-size:9px;letter-spacing:.35em;opacity:.6">BLACK OWNED • EST 2018 • OSU ACCRA</div></header>
+<title>Mama Joyce Kenkey | Accra</title>
 
-<section class="hero">
-<div class="badge">LUXURY DIM • COLOURFUL BUSINESS EDITION</div>
-<h1>Experience<br><i>Luxury Kenkey</i></h1>
-<p>Moody 5-star lounge. 3-day fermented corn, Volta tilapia. Ama stands at the door in kente to welcome you. No white background. Full colour. Full business.</p>
-<div class="btns">
-<a class="btn btn-gold" href="https://wa.me/233200000000?text=Hello%20Ama%20Book%20Table%20Gye%20Nyame" target="_blank" rel="noopener noreferrer nofollow">WHATSAPP AMA</a>
-<a class="btn btn-line" href="#menu">VIEW MENU ↓</a>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff7df;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#00843d,#ffd700,#ce1126);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+.hero{
+
+height:90vh;
+
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+}
+
+
+.hero h1{
+
+font-size:60px;
+color:#ffd700;
+
+}
+
+
+.hero p{
+
+font-size:25px;
+margin:20px;
+
+}
+
+
+.btn{
+
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+display:inline-block;
+margin:10px;
+font-weight:bold;
+
+}
+
+
+.whatsapp{
+background:#25D366;
+}
+
+
+.call{
+background:#000;
+}
+
+
+.delivery{
+
+background:#ce1126;
+padding:15px;
+border-radius:30px;
+display:inline-block;
+
+animation:pulse 1.5s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.1);
+}
+
+}
+
+
+section{
+
+padding:60px 10%;
+
+}
+
+
+.title{
+
+text-align:center;
+font-size:40px;
+color:#00843d;
+margin-bottom:30px;
+
+}
+
+
+.card{
+
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 25px #ccc;
+margin:20px 0;
+
+}
+
+
+
+.menu{
+
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+
+
+.food{
+
+flex:1;
+min-width:230px;
+background:white;
+padding:20px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+
+}
+
+
+
+.food:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.food img{
+
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:20px;
+
+}
+
+
+
+.price{
+
+color:green;
+font-size:25px;
+font-weight:bold;
+
+}
+
+
+.qr{
+
+text-align:center;
+
+}
+
+
+.qr img{
+
+width:200px;
+
+}
+
+
+
+.float{
+
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+padding:18px;
+border-radius:50%;
+color:white;
+font-size:25px;
+text-decoration:none;
+
+}
+
+
+footer{
+
+background:#4b2600;
+color:white;
+padding:30px;
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>🍲 MAMA JOYCE KENKEY</h1>
+
+<p>Accra Kasapreko</p>
+
+</header>
+
+
+
+<nav>
+
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+
+
+<div class="hero">
+
+<div>
+
+<h1>
+MAMA JOYCE KENKEY
+</h1>
+
+
+<p>
+Authentic Ghana Kenkey • Fish • Pepper ❤️
+</p>
+
+
+<div class="delivery">
+
+🚚 Fresh Delivery Available
+
 </div>
+
+
+<br>
+
+
+<a class="btn whatsapp"
+href="https://wa.me/233242681763">
+
+Order WhatsApp
+
+</a>
+
+
+<a class="btn call"
+href="tel:0242681763">
+
+Call Now
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<a class="float" href="https://wa.me/233242681763">
+💬
+</a>
+
+
+
+
+
+<section id="about">
+
+
+<h2 class="title">
+
+👩🏿 Our Story
+
+</h2>
+
+
+<div class="card">
+
+Mama Joyce has been making hot kenkey in Accra Kasapreko for 13 years.
+
+<br><br>
+
+Fresh every morning.
+Soft every time.
+
+<br><br>
+
+Pepper that makes you sweat and smile.
+
+<br><br>
+
+From our kitchen to your plate.
+
+</div>
+
+
 </section>
 
-<div class="grid" id="menu">
-<div class="card"><h3>Volta Tilapia Gold</h3><p>Charcoal grilled, pepper shito gold.</p><br><b>GHS 280</b></div>
-<div class="card"><h3>3-Day Kenkey Red</h3><p>72hr fermented, plantain leaf.</p><br><b>GHS 90</b></div>
-<div class="card"><h3>Okro Green Luxury</h3><p>Crab, smoked fish, palm.</p><br><b>GHS 180</b></div>
-<div class="card"><h3>Sobolo Orange Noir</h3><p>Bissap, ginger, dim infusion.</p><br><b>GHS 60</b></div>
+
+
+
+
+
+<section id="menu">
+
+
+<h2 class="title">
+
+🍽️ Our Menu
+
+</h2>
+
+
+<div class="menu">
+
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+
+<h2>Kenkey Only</h2>
+
+<p class="price">
+GH¢5
+</p>
+
 </div>
 
-<div class="map-wrap">
-<iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.213%2C5.55%2C-0.16%2C5.58&layer=mapnik&marker=5.56%2C-0.186" title="Map"></iframe>
-<div class="map-info">
-<h2 style="font-family:'Cormorant Garamond';font-size:32px;color:#D4AF37">Find Us — Osu, Accra</h2>
-<p style="margin:14px 0;opacity:.8">14th Lane, Oxford Street, Osu<br>Greater Accra, Ghana<br><br>Hours: 11AM - 11PM daily<br>Last kitchen: 9:30PM</p>
-<a href="https://www.google.com/maps/search/Osu+Accra+Ghana" target="_blank" rel="noopener noreferrer" style="color:#D4AF37">Open in Google Maps →</a>
-<p style="margin-top:18px;font-size:11px;opacity:.5">🔒 Map lazy-loaded • No tracking • CSP secured • Fast for Ghana data</p>
-</div>
+
+
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
+
+<h2>Kenkey + Fish</h2>
+
+<p class="price">
+GH¢20 - GH¢30
+</p>
+
 </div>
 
-<div class="kente"></div>
-<footer>© 2026 GYE NYAME HOT KENKEY • COLOURFUL BUSINESS • SECURE • FAST • <a href=".well-known/security.txt" style="color:#D4AF37">security.txt</a></footer>
 
-<div id="ai">
-<div id="ai-box">
-<div id="ai-head"><span>AMA AI • ONLINE • COLOURFUL</span><span id="ai-x" style="cursor:pointer">✕</span></div>
-<div id="ai-chat"><div class="m bot">Akwaaba! 🌈 I'm Ama AI. Background no be white again! Ask me menu, price, hours, location.</div></div>
-<div id="ai-in"><input id="ai-txt" placeholder="Ask Ama..."><button id="ai-send">→</button></div>
-</div>
-<button id="ai-btn">💬</button>
+
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
+
+<h2>Kenkey + Chicken</h2>
+
+<p class="price">
+GH¢35
+</p>
+
 </div>
 
-<script>
-if(window.top!==window.self) window.top.location=window.self.location;
-try{Object.freeze(Object.prototype)}catch(e){}
-const chat=document.getElementById('ai-chat'),inp=document.getElementById('ai-txt');
-const A={menu:"Tilapia GHS 280, Kenkey GHS 90, Okro GHS 180, Sobolo GHS 60 - colourful menu!",price:"GHS 60-280 range, avg 95. MoMo & Visa accepted",hours:"11AM-11PM daily, Osu Accra",location:"Osu 16th Lane, Oxford St. Map dey inside site",book:"Click WhatsApp Ama button, we reply in 5mins",kenkey:"Fermented 72hrs, charcoal grilled, kente-wrapped luxury"};
-function add(t,c){const d=document.createElement('div');d.className='m '+c;d.textContent=t;chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
-function ans(q){q=q.toLowerCase();if(q.includes('menu'))return A.menu;if(q.includes('price')||q.includes('cost'))return A.price;if(q.includes('hour')||q.includes('open'))return A.hours;if(q.includes('where')||q.includes('location')||q.includes('map'))return A.location;if(q.includes('book')||q.includes('table'))return A.book;if(q.includes('kenkey'))return A.kenkey;return "Ask me menu, price, hours, location, booking!"}
-document.getElementById('ai-btn').onclick=()=>document.getElementById('ai-box').classList.toggle('open');
-document.getElementById('ai-x').onclick=()=>document.getElementById('ai-box').classList.remove('open');
-document.getElementById('ai-send').onclick=()=>{const v=inp.value.trim();if(!v)return;add(v,'me');inp.value='';setTimeout(()=>add(ans(v),'bot'),400)};
-inp.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('ai-send').click()});
-</script>
+
+
+
+<div class="food">
+
+<h2>🔥 All In One</h2>
+
+<p class="price">
+GH¢50
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+
+💰 MoMo Payment
+
+</h2>
+
+
+<div class="card">
+
+MTN MoMo:
+<b>0242681763</b>
+
+<br><br>
+
+Send receipt through WhatsApp after payment.
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+
+📱 Scan To Order
+
+</h2>
+
+
+<div class="card qr">
+
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/233242681763">
+
+
+<p>
+Scan and order instantly
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="contact">
+
+
+<h2 class="title">
+
+⭐ Customer Review
+
+</h2>
+
+
+<div class="card">
+
+⭐⭐⭐⭐⭐
+
+<br><br>
+
+"Eii this kenkey have been soft paa!
+The pepper too has fire 🔥.
+Mama Joyce dey do the work."
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+
+📍 Location
+
+</h2>
+
+
+<div class="card" style="text-align:center">
+
+Accra - Kasapreko
+
+<br><br>
+
+
+<a class="btn whatsapp"
+href="https://maps.google.com/?q=Kasapreko+Accra">
+
+Open Map
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<h2>
+MAMA JOYCE KENKEY 🍲
+</h2>
+
+<p>
+Open: 8AM - 9PM
+</p>
+
+<p>
+0242681763
+</p>
+
+</footer>
+
+
+
 </body>
+
 </html>
