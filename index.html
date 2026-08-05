@@ -3,122 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYE NYAME HOTE KENKEY - ACCRA-KASAPEREKO | Order Hot Kenkey</title>
+<title>GYE NYAME HOTE KENKEY - Login</title>
 <style>
-  *{margin:0; padding:0; box-sizing:border-box}
-  body{font-family:'Arial', sans-serif; background:linear-gradient(to bottom, #FFF8F0, #FFEFD5); color:#333}
+  *{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
+  body{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); min-height:100vh}
   
-  /* MORE COLORFUL HERO */
-  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:60px 20px; border-bottom:8px solid #FFC107}
-  .hero h1{font-size:38px; margin:0 0 10px; text-shadow:3px 3px 6px #000}
-  .hero p{font-size:20px; margin:0 0 15px}
-  .badge{display:inline-block; background:linear-gradient(90deg,#FFC107,#FF6B00); color:#000; padding:10px 20px; border-radius:25px; font-size:15px; font-weight:bold; margin-bottom:15px; animation:pulse 2s infinite}
-  @keyframes pulse{0%{transform:scale(1)} 50%{transform:scale(1.05)} 100%{transform:scale(1)}}
+  /* LOGIN PAGE */
+  .login-container{display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px}
+  .login-box{background:white; padding:35px; border-radius:20px; width:100%; max-width:400px; box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+  .login-box h1{color:#D32F2F; text-align:center; margin-bottom:10px}
+  .login-box p{text-align:center; margin-bottom:20px; color:#666}
+  .input-group{margin-bottom:15px}
+  .input-group label{display:block; margin-bottom:5px; font-weight:bold; color:#8B4513}
+  .input-group input{width:100%; padding:14px; border:2px solid #FFEFD5; border-radius:10px; font-size:16px}
+  .login-btn{width:100%; padding:16px; background:linear-gradient(90deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50px; font-size:18px; font-weight:bold; cursor:pointer; margin-top:10px}
+  .switch{text-align:center; margin-top:15px; color:#666}
+  .switch a{color:#D32F2F; font-weight:bold; cursor:pointer; text-decoration:none}
+  .hidden{display:none}
   
-  .btn{display:block; width:90%; max-width:350px; padding:18px; margin:12px auto; border-radius:50px; font-weight:bold; text-decoration:none; font-size:20px; transition:0.3s; text-align:center}
-  .btn:hover{transform:scale(1.05)}
-  .btn-wa{background:linear-gradient(90deg,#25D366,#128C7E); color:white; box-shadow:0 6px 15px rgba(37,211,102,0.5)}
-  .btn-call{background:linear-gradient(90deg,#000,#333); color:#FFC107; box-shadow:0 6px 15px rgba(0,0,0,0.5)}
-  .hero-img{width:100%; max-width:500px; border-radius:20px; margin-top:25px; border:6px solid #FFC107; box-shadow:0 8px 20px rgba(0,0,0,0.3)}
+  /* MAIN APP */
+  .app{display:none}
+  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:50px 20px; border-bottom:8px solid #FFC107}
+  .hero h1{font-size:34px; text-shadow:2px 2px 4px #000}
+  .logout{position:absolute; top:15px; right:15px; background:#000; color:#FFC107; padding:8px 15px; border-radius:20px; border:none; cursor:pointer; font-weight:bold}
   
-  .section{padding:50px 20px; max-width:800px; margin:auto}
-  .section h2{color:#D32F2F; border-bottom:5px solid #FFC107; display:inline-block; padding-bottom:8px; margin-bottom:25px; font-size:30px}
+  .btn{display:block; width:90%; max-width:350px; padding:18px; margin:12px auto; border-radius:50px; font-weight:bold; text-decoration:none; font-size:20px; text-align:center}
+  .btn-wa{background:linear-gradient(90deg,#25D366,#128C7E); color:white}
+  .btn-call{background:linear-gradient(90deg,#000,#333); color:#FFC107}
+  .hero-img{width:100%; max-width:500px; border-radius:20px; margin-top:20px; border:5px solid #FFC107}
   
-  /* COLORFUL MENU CARDS */
-  .menu-card{background:linear-gradient(135deg,white,#FFF0E0); border-left:10px solid #FF6B00; padding:20px; margin:20px 0; border-radius:18px; box-shadow:0 6px 18px rgba(211,47,47,0.2); display:flex; justify-content:space-between; align-items:center; gap:15px; position:relative}
-  .popular{position:absolute; top:-12px; right:15px; background:linear-gradient(90deg,#FFC107,#FF6B00); color:#000; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold}
-  .menu-card img{width:120px; height:120px; border-radius:15px; object-fit:cover; border:4px solid #FFC107}
-  .price{color:#D32F2F; font-size:26px; font-weight:bold}
+  .section{padding:40px 20px; max-width:800px; margin:auto}
+  .section h2{color:#D32F2F; border-bottom:4px solid #FFC107; display:inline-block; margin-bottom:20px}
+  .menu-card{background:linear-gradient(135deg,white,#FFF0E0); border-left:8px solid #FF6B00; padding:18px; margin:18px 0; border-radius:15px; display:flex; justify-content:space-between; align-items:center}
+  .menu-card img{width:110px; height:110px; border-radius:12px; border:3px solid #FFC107}
+  .price{color:#D32F2F; font-size:24px; font-weight:bold}
+  .contact-box{background:linear-gradient(135deg,#8B4513,#D32F2F); color:white; padding:25px; border-radius:15px; text-align:center}
+  .footer{background:#222; color:#FFC107; text-align:center; padding:20px}
   
-  .review{background:linear-gradient(135deg,white,#E8F5E9); padding:20px; border-radius:15px; margin:15px 0; border-left:6px solid #25D366; box-shadow:0 4px 10px rgba(0,0,0,0.1)}
-  .contact-box{background:linear-gradient(135deg,#8B4513,#D32F2F,#FF6B00); color:white; padding:30px; border-radius:18px; text-align:center}
-  
-  .footer{background:linear-gradient(90deg,#222,#8B4513); color:#FFC107; text-align:center; padding:25px; font-size:15px}
-  
-  /* AI ASSISTANT CHAT */
-  .chat-btn{position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50%; width:65px; height:65px; font-size:32px; cursor:pointer; box-shadow:0 6px 20px rgba(211,47,47,0.5); z-index:999}
-  .chat-box{display:none; position:fixed; bottom:90px; right:20px; width:320px; height:420px; background:white; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.3); z-index:999; flex-direction:column}
+  /* AI ASSISTANT - BOTTOM RIGHT */
+  .chat-btn{position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50%; width:65px; height:65px; font-size:32px; cursor:pointer; box-shadow:0 6px 20px rgba(211,47,47,0.6); z-index:999}
+  .chat-box{display:none; position:fixed; bottom:90px; right:20px; width:320px; height:420px; background:white; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.4); z-index:999; flex-direction:column}
   .chat-header{background:linear-gradient(90deg,#FF6B00,#D32F2F); color:white; padding:15px; border-radius:20px 20px 0 0; font-weight:bold}
   .chat-body{flex:1; padding:15px; overflow-y:auto; font-size:14px}
   .chat-msg{background:#FFEFD5; padding:10px; border-radius:12px; margin:8px 0}
   .chat-input{display:flex; border-top:1px solid #ddd}
-  .chat-input input{flex:1; border:none; padding:12px; border-radius:0 0 0 20px}
+  .chat-input input{flex:1; border:none; padding:12px; border-radius:0 0 0 20px; outline:none}
   .chat-input button{background:#FF6B00; color:white; border:none; padding:12px 18px; border-radius:0 0 20px 0; cursor:pointer}
-  
-  @media(max-width:600px){
-    .menu-card{flex-direction:column; text-align:center}
-    .chat-box{width:90%; right:5%}
-  }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>🍛 GYE NYAME HOTE KENKEY</h1>
-  <p>Fresh. Soft. Made Daily in ACCRA-KASAPEREKO</p>
-  <span class="badge">🔥 HOT & FRESH DAILY 🔥</span><br>
-  <p style="background:rgba(0,0,0,0.3); display:inline-block; padding:8px 15px; border-radius:20px;">📍 ACCRA-KASAPEREKO | 🕐 6am - 8pm Daily</p><br><br>
+<!-- LOGIN / SIGNUP PAGE -->
+<div class="login-container" id="loginPage">
+  <div class="login-box">
+    <h1>🍛 GYE NYAME HOTE KENKEY</h1>
+    <p id="loginTitle">Login to Order</p>
+    
+    <div id="loginForm">
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="tel" id="loginPhone" placeholder="0242681763">
+      </div>
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="loginPass" placeholder="Enter password">
+      </div>
+      <button class="login-btn" onclick="login()">Login</button>
+      <p class="switch">New here? <a onclick="showSignup()">Sign Up</a></p>
+    </div>
+    
+    <div id="signupForm" class="hidden">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="signupName" placeholder="Your Name">
+      </div>
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="tel" id="signupPhone" placeholder="0242681763">
+      </div>
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="signupPass" placeholder="Create password">
+      </div>
+      <button class="login-btn" onclick="signup()">Sign Up</button>
+      <p class="switch">Already have account? <a onclick="showLogin()">Login</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN APP - ONLY SHOWS AFTER LOGIN -->
+<div class="app" id="mainApp">
+  <button class="logout" onclick="logout()">Logout</button>
   
-  <a href="https://wa.me/233242681763?text=Hi%20GYE%20NYAME%20HOTE%20KENKEY,%20I%20want%20to%20order%20kenkey" class="btn btn-wa">💚 Order on WhatsApp</a>
-  <a href="tel:0242681763" class="btn btn-call">📞 Call 0242681763</a>
-  
-  <img src="kenkey-hero.jpg" class="hero-img" alt="Hot GYE NYAME HOTE KENKEY">
-</div>
-
-<!-- MENU -->
-<div class="section">
-  <h2>📍 Our Kenkey Menu</h2>
-  
-  <div class="menu-card">
-    <div><b>Kenkey Only</b><br>Soft and fresh<br><span class="price">GH¢5</span></div>
-    <img src="kenkey1.jpg" alt="Kenkey">
+  <!-- HERO -->
+  <div class="hero">
+    <h1>🍛 GYE NYAME HOTE KENKEY</h1>
+    <p>Fresh. Soft. Made Daily in ACCRA-KASAPEREKO</p>
+    <p>📍 ACCRA-KASAPEREKO | 🕐 6am - 8pm Daily</p><br>
+    <a href="https://wa.me/233242681763?text=Hi%20GYE%20NYAME%20HOTE%20KENKEY,%20I%20want%20to%20order%20kenkey" class="btn btn-wa">💚 Order on WhatsApp</a>
+    <a href="tel:0242681763" class="btn btn-call">📞 Call 0242681763</a>
+    <img src="kenkey-hero.jpg" class="hero-img" alt="Hot Kenkey">
   </div>
 
-  <div class="menu-card">
-    <span class="popular">BEST SELLER</span>
-    <div><b>Kenkey + Chicken Back</b><br>Pepper + onions + shito<br><span class="price">GH¢15</span></div>
-    <img src="kenkey2.jpg" alt="Chicken">
+  <!-- MENU -->
+  <div class="section">
+    <h2>📍 Our Kenkey Menu</h2>
+    <div class="menu-card">
+      <div><b>Kenkey Only</b><br>Soft and fresh<br><span class="price">GH¢5</span></div>
+      <img src="kenkey1.jpg" alt="Kenkey">
+    </div>
+    <div class="menu-card">
+      <div><b>Kenkey + Chicken Back</b><br>Pepper + onions + shito<br><span class="price">GH¢15</span></div>
+      <img src="kenkey2.jpg" alt="Chicken">
+    </div>
+    <div class="menu-card">
+      <div><b>Kenkey + Normal Fish</b><br>Fried fish + spicy pepper<br><span class="price">GH¢20</span></div>
+      <img src="kenkey3.jpg" alt="Fish">
+    </div>
+    <div class="menu-card">
+      <div><b>Kenkey + Red Fish</b><br>Big red fish + sauce<br><span class="price">GH¢30</span></div>
+      <img src="kenkey4.jpg" alt="Red Fish">
+    </div>
   </div>
 
-  <div class="menu-card">
-    <div><b>Kenkey + Normal Fish</b><br>Fried fish + spicy pepper<br><span class="price">GH¢20</span></div>
-    <img src="kenkey3.jpg" alt="Fish">
+  <!-- CONTACT -->
+  <div class="section">
+    <h2>📞 Order & Contact</h2>
+    <div class="contact-box">
+      <p><b>📍 ACCRA-KASAPEREKO</b></p>
+      <p><b>🕐 6am - 8pm Mon-Sat</b></p>
+      <p><b>💚 WhatsApp/Call/MOMO: 0242681763</b></p>
+    </div>
   </div>
 
-  <div class="menu-card">
-    <div><b>Kenkey + Red Fish</b><br>Big red fish + sauce<br><span class="price">GH¢30</span></div>
-    <img src="kenkey4.jpg" alt="Red Fish">
-  </div>
+  <div class="footer">© 2026 GYE NYAME HOTE KENKEY - ACCRA-KASAPEREKO 🇬🇭</div>
 </div>
 
-<!-- STORY + REVIEWS + CONTACT SAME AS BEFORE -->
-<div class="section">
-  <h2>❤️ Our Story</h2>
-  <p><b>GYE NYAME HOTE KENKEY</b> has been serving ACCRA-KASAPEREKO with love. 
-  We start at 4am to make your kenkey by hand. <b>MOMO:</b> 0242681763</p>
-</div>
-
-<div class="section">
-  <h2>⭐ Customer Reviews</h2>
-  <div class="review">"Best kenkey in Kasapereko! Soft and pepper is fire" <b>- Ama K.</b></div>
-  <div class="review">"Ordered on WhatsApp, delivered hot in 30mins" <b>- Kofi D.</b></div>
-</div>
-
-<div class="section">
-  <h2>📞 Order & Contact</h2>
-  <div class="contact-box">
-    <p><b>📍 ACCRA-KASAPEREKO</b></p>
-    <p><b>🕐 6am - 8pm Mon-Sat</b></p>
-    <p><b>💚 WhatsApp/Call/MOMO: 0242681763</b></p>
-  </div>
-</div>
-
-<div class="footer">
-  © 2026 GYE NYAME HOTE KENKEY - ACCRA-KASAPEREKO 🇬🇭
-</div>
-
-<!-- AI ASSISTANT -->
+<!-- AI ASSISTANT - BOTTOM RIGHT -->
 <button class="chat-btn" onclick="toggleChat()">🤖</button>
 <div class="chat-box" id="chatBox">
   <div class="chat-header">Gye Nyame AI Helper</div>
@@ -138,41 +159,67 @@
 </div>
 
 <script>
+// LOGIN SYSTEM - SAVED IN BROWSER
+function showSignup(){
+  document.getElementById('loginForm').classList.add('hidden');
+  document.getElementById('signupForm').classList.remove('hidden');
+  document.getElementById('loginTitle').innerText = "Create Account";
+}
+function showLogin(){
+  document.getElementById('signupForm').classList.add('hidden');
+  document.getElementById('loginForm').classList.remove('hidden');
+  document.getElementById('loginTitle').innerText = "Login to Order";
+}
+function signup(){
+  let name = document.getElementById('signupName').value;
+  let phone = document.getElementById('signupPhone').value;
+  let pass = document.getElementById('signupPass').value;
+  if(name && phone && pass){
+    localStorage.setItem('user', JSON.stringify({name, phone, pass}));
+    alert("Account created! Now login");
+    showLogin();
+  } else { alert("Fill all fields") }
+}
+function login(){
+  let phone = document.getElementById('loginPhone').value;
+  let pass = document.getElementById('loginPass').value;
+  let user = JSON.parse(localStorage.getItem('user'));
+  if(user && user.phone === phone && user.pass === pass){
+    document.getElementById('loginPage').style.display = 'none';
+    document.getElementById('mainApp').style.display = 'block';
+  } else { alert("Wrong phone or password") }
+}
+function logout(){
+  document.getElementById('loginPage').style.display = 'flex';
+  document.getElementById('mainApp').style.display = 'none';
+}
+// Check if already logged in
+if(localStorage.getItem('user') && sessionStorage.getItem('loggedIn')){
+  document.getElementById('loginPage').style.display = 'none';
+  document.getElementById('mainApp').style.display = 'block';
+}
+
+// AI ASSISTANT
 function toggleChat(){
   var box = document.getElementById('chatBox');
   box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
 }
-
 function sendMsg(){
   var input = document.getElementById('userInput');
   var body = document.getElementById('chatBody');
   var msg = input.value;
   if(msg.trim() === '') return;
-  
   body.innerHTML += `<div class="chat-msg" style="background:#D32F2F; color:white; text-align:right">${msg}</div>`;
   input.value = '';
-  
-  // AI RESPONSES
   setTimeout(()=>{
-    let reply = "Thanks for your message! ";
-    if(msg.toLowerCase().includes('menu') || msg.includes('1')){
-      reply = "Our Menu: <br>Kenkey GH¢5<br>Chicken Back GH¢15<br>Normal Fish GH¢20<br>Red Fish GH¢30<br>Click WhatsApp button to order!";
-    }
-    else if(msg.toLowerCase().includes('order') || msg.includes('2')){
-      reply = "To order, click the green 'Order on WhatsApp' button above or call 0242681763. What would you like?";
-    }
-    else if(msg.toLowerCase().includes('report') || msg.includes('3') || msg.toLowerCase().includes('problem')){
-      reply = "Sorry for the trouble 😔 Please tell me your problem. Or WhatsApp us directly on 0242681763 and we will fix it fast.";
-    }
-    else if(msg.toLowerCase().includes('delivery') || msg.includes('4')){
-      reply = "We deliver in ACCRA-KASAPEREKO and nearby areas. Delivery fee depends on location. Call 0242681763 to confirm.";
-    }
-    else{
-      reply = "I got you! For quick help, WhatsApp us on 0242681763. Or type: 1-Menu 2-Order 3-Report 4-Delivery";
-    }
+    let reply = "For quick help, WhatsApp 0242681763. Or type: 1-Menu 2-Order 3-Report 4-Delivery";
+    if(msg.includes('1')) reply = "Menu: Kenkey GH¢5 | Chicken GH¢15 | Normal Fish GH¢20 | Red Fish GH¢30";
+    if(msg.includes('2')) reply = "Click the green WhatsApp button above to order!";
+    if(msg.includes('3')) reply = "Sorry 😔 Tell me your problem. Or WhatsApp 0242681763 and we will fix it.";
+    if(msg.includes('4')) reply = "We deliver in ACCRA-KASAPEREKO. Call 0242681763 to confirm.";
     body.innerHTML += `<div class="chat-msg">${reply}</div>`;
     body.scrollTop = body.scrollHeight;
-  }, 800);
+  }, 600);
 }
 </script>
 
