@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mama Joyce Kenkey</title>
+
+<title>Mama Joyce Kenkey | Accra</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
 body{
-background:#fff8e1;
+background:#fff7df;
 color:#222;
 }
 
-header{
 
-background:linear-gradient(90deg,#008000,#ffd700,#e31b23);
-padding:15px;
+/* HEADER */
+
+header{
+background:linear-gradient(90deg,#00843d,#ffd700,#ce1126);
+padding:20px;
 color:white;
 text-align:center;
-
 }
+
+
+/* HERO */
 
 .hero{
 
-height:90vh;
+min-height:90vh;
 
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
 url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
 
 background-size:cover;
 background-position:center;
 
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 color:white;
 
+padding:20px;
+
 }
+
 
 .hero h1{
 
-font-size:55px;
+font-size:60px;
 color:#ffd700;
 
 }
@@ -57,50 +65,26 @@ color:#ffd700;
 
 .hero p{
 
-font-size:22px;
+font-size:24px;
 margin:20px;
 
 }
 
 
-.btn{
 
+.badge{
+
+background:#ce1126;
 padding:15px 25px;
-border-radius:30px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-display:inline-block;
-margin:10px;
-
-}
-
-.whatsapp{
-
-background:#25D366;
-
-}
-
-.call{
-
-background:black;
-
-}
-
-
-.delivery{
-
-background:#e31b23;
-padding:12px;
-border-radius:30px;
+border-radius:50px;
 display:inline-block;
 
-animation:move 2s infinite;
+animation:pulse 1.5s infinite;
 
 }
 
 
-@keyframes move{
+@keyframes pulse{
 
 50%{
 transform:scale(1.1);
@@ -110,9 +94,49 @@ transform:scale(1.1);
 
 
 
+
+.btn{
+
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+display:inline-block;
+margin:10px;
+
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+.whatsapp{
+
+background:#25D366;
+
+}
+
+
+.call{
+
+background:#111;
+
+}
+
+
+
+
 section{
 
-padding:50px 10%;
+padding:60px 10%;
 
 }
 
@@ -120,23 +144,29 @@ padding:50px 10%;
 .title{
 
 text-align:center;
-font-size:35px;
-color:#008000;
-margin-bottom:25px;
+font-size:38px;
+color:#00843d;
+margin-bottom:30px;
 
 }
+
 
 
 .card{
 
 background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px #ccc;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 25px #ccc;
 margin:20px 0;
 
 }
 
+
+
+
+
+/* STORY */
 
 
 .story{
@@ -151,29 +181,35 @@ flex-wrap:wrap;
 
 .story img{
 
-width:300px;
-border-radius:20px;
+width:320px;
+height:250px;
+object-fit:cover;
+border-radius:25px;
 
 }
 
+
+
+
+/* MENU */
 
 
 .menu{
 
 display:flex;
 flex-wrap:wrap;
-gap:20px;
+gap:25px;
 
 }
 
 
-.item{
+.food{
 
-background:white;
 flex:1;
-min-width:220px;
+min-width:230px;
+background:white;
 padding:20px;
-border-radius:20px;
+border-radius:25px;
 text-align:center;
 box-shadow:0 5px 15px #ccc;
 
@@ -182,21 +218,24 @@ transition:.3s;
 }
 
 
-.item:hover{
+
+.food:hover{
 
 transform:translateY(-10px);
 
 }
 
 
-.item img{
+
+.food img{
 
 width:100%;
-height:160px;
+height:170px;
 object-fit:cover;
-border-radius:15px;
+border-radius:20px;
 
 }
+
 
 
 .price{
@@ -208,16 +247,51 @@ font-weight:bold;
 }
 
 
-.counter{
 
-background:#008000;
-color:white;
-padding:20px;
-border-radius:20px;
-text-align:center;
+
+
+/* FLOATING ORDER */
+
+
+.float{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+background:#25D366;
+
+padding:18px;
+
+border-radius:50%;
+
 font-size:25px;
 
+text-decoration:none;
+
+color:white;
+
 }
+
+
+
+/* QR */
+
+
+.qr{
+
+text-align:center;
+
+}
+
+
+
+.qr img{
+
+width:180px;
+
+}
+
 
 
 
@@ -230,12 +304,15 @@ text-align:center;
 
 }
 
+
 </style>
+
 
 </head>
 
 
 <body>
+
 
 
 <header>
@@ -244,25 +321,38 @@ text-align:center;
 🍲 MAMA JOYCE KENKEY
 </h2>
 
+<p>
+Accra Kasapreko
+</p>
+
 </header>
+
+
 
 
 <div class="hero">
 
+
 <div>
+
 
 <h1>
 MAMA JOYCE KENKEY
 </h1>
+
 
 <p>
 Soft Ghana Kenkey • Fresh Pepper • Made With Love ❤️
 </p>
 
 
-<div class="delivery">
+
+<div class="badge">
+
 🚚 FAST DELIVERY AVAILABLE
+
 </div>
+
 
 
 <br>
@@ -271,43 +361,72 @@ Soft Ghana Kenkey • Fresh Pepper • Made With Love ❤️
 <a class="btn whatsapp"
 href="https://wa.me/233242681763">
 
-Order WhatsApp
+🟢 Order WhatsApp
 
 </a>
+
 
 
 <a class="btn call"
 href="tel:0242681763">
 
-Call Now
+📞 Call Now
 
 </a>
 
 
 </div>
 
+
 </div>
+
+
+
+
+
+<a class="float"
+href="https://wa.me/233242681763">
+
+💬
+
+</a>
+
 
 
 
 
 <section>
 
-<div class="counter">
 
-🔥 12+ Customers Ordered Today
+<h2 class="title">
+
+🔥 Fresh Today
+
+</h2>
+
+
+<div class="card" style="text-align:center">
+
+12+ customers already enjoying Mama Joyce Kenkey today 🍲
 
 </div>
+
 
 </section>
 
 
 
 
+
+
+
 <section>
 
+
 <h2 class="title">
-People Buy From People ❤️
+
+👩🏿 People Buy From People
+
 </h2>
 
 
@@ -321,17 +440,24 @@ People Buy From People ❤️
 
 Mama Joyce has been wrapping hot kenkey in Accra Kasapreko for 13 years.
 
+<br><br>
+
 Fresh every morning.
+
 Soft every time.
 
 Pepper that makes you sweat and smile.
 
-From our kitchen to your plate.
+<br><br>
+
+From our kitchen to your plate — taste the difference.
 
 </p>
 
 
+
 </div>
+
 
 </section>
 
@@ -340,78 +466,122 @@ From our kitchen to your plate.
 
 
 
+
+
 <section>
 
+
 <h2 class="title">
-Our Menu 🍽️
+
+🍽️ Our Menu
+
 </h2>
 
 
 <div class="menu">
 
 
-<div class="item">
+
+<div class="food">
 
 <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
 
 <h2>
+
 Kenkey Only
+
 </h2>
 
 <p class="price">
+
 GH¢5
+
 </p>
 
 </div>
 
 
 
-<div class="item">
+
+
+<div class="food">
+
 
 <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
 
+
 <h2>
+
 Kenkey + Fish
+
 </h2>
 
+
 <p class="price">
+
 GH¢20 - GH¢30
+
 </p>
+
 
 </div>
 
 
 
-<div class="item">
+
+
+
+<div class="food">
+
 
 <img src="https://images.unsplash.com/photo-1547592180-85f173990554">
 
+
 <h2>
+
 Kenkey + Chicken
+
 </h2>
 
+
 <p class="price">
+
 GH¢35
+
 </p>
+
 
 </div>
 
 
 
-<div class="item">
+
+
+
+<div class="food">
+
 
 <h2>
+
 🔥 All In One
+
 </h2>
+
 
 <p class="price">
+
 GH¢50
+
 </p>
 
+
 </div>
 
 
+
+
 </div>
+
 
 </section>
 
@@ -419,24 +589,44 @@ GH¢50
 
 
 
+
+
 <section>
 
+
 <h2 class="title">
+
 💰 MoMo Payment
+
 </h2>
+
 
 
 <div class="card">
 
-<p>
-MTN MoMo: <b>0242681763</b>
-</p>
 
 <p>
-Send receipt on WhatsApp after payment.
+
+MTN MoMo:
+
+<b>
+
+0242681763
+
+</b>
+
 </p>
+
+
+<p>
+
+Send payment receipt through WhatsApp.
+
+</p>
+
 
 </div>
+
 
 </section>
 
@@ -444,26 +634,71 @@ Send receipt on WhatsApp after payment.
 
 
 
+
 <section>
 
+
 <h2 class="title">
-⭐ Customer Review
+
+📱 Scan To Order
+
 </h2>
 
 
+<div class="card qr">
+
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/233242681763">
+
+
+<p>
+
+Scan QR Code and order directly
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+
+⭐ Customer Review
+
+</h2>
+
+
+
 <div class="card">
+
 
 ⭐⭐⭐⭐⭐
+
 
 <p>
 
 "Eii this kenkey have been soft paa!
+
 The pepper too has fire 🔥.
-Mama Joyce dey do the work."
+
+Mama Joyce in Accra Kasapreko dey do the work."
 
 </p>
 
+
 </div>
+
 
 </section>
 
@@ -471,32 +706,39 @@ Mama Joyce dey do the work."
 
 
 
+
 <section>
 
+
 <h2 class="title">
+
 📍 Find Us
+
 </h2>
 
 
-<div class="card">
+<div class="card" style="text-align:center">
 
-<p>
+
 Accra - Kasapreko
-</p>
 
-<br>
+
+<br><br>
+
 
 <a class="btn whatsapp"
 href="https://maps.google.com/?q=Kasapreko+Accra">
 
-Open Google Maps
+🗺️ Open Google Maps
 
 </a>
 
 
 </div>
 
+
 </section>
+
 
 
 
@@ -504,20 +746,33 @@ Open Google Maps
 
 <footer>
 
+
 <h2>
+
 MAMA JOYCE KENKEY 🍲
+
 </h2>
 
-<p>
-Open: 8AM - 9PM
-</p>
 
 <p>
-☎ 0242681763
+
+Open Daily: 8AM - 9PM
+
 </p>
+
+
+<p>
+
+☎ 0242681763
+
+</p>
+
 
 </footer>
 
 
+
+
 </body>
+
 </html>
