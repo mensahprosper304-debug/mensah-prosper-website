@@ -3,331 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gye Nyame Hot Kenkey | Premium Ghana Food</title>
-
+<title>GYE NYAME HOTE KENKEY | Luxury Kenkey in Accra</title>
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+:root{
+  --gold: #D4AF37;
+  --black: #0A0A0A;
+  --dark: #1A1A1A;
+  --white: #FFFFFF;
 }
-
-body{
-    background:#0b0b0b;
-    color:white;
-}
-
-/* HEADER */
-header{
-    background:linear-gradient(90deg,#000,#b8860b);
-    padding:20px;
-    text-align:center;
-}
-
-header h1{
-    color:#ffd700;
-    font-size:35px;
-}
-
-header p{
-    margin-top:10px;
-}
-
-
-/* NAVIGATION */
-nav{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    background:#111;
-    padding:15px;
-}
-
-nav a{
-    color:#ffd700;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-
-/* HERO */
-.hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,.6),
-    rgba(0,0,0,.8)),
-    url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
-    
-    background-size:cover;
-    background-position:center;
-}
-
-
-.hero h2{
-    font-size:45px;
-    color:#ffd700;
-}
-
-
-.hero button{
-    margin-top:20px;
-    padding:15px 30px;
-    border:none;
-    border-radius:30px;
-    background:#ffd700;
-    color:black;
-    font-size:18px;
-    cursor:pointer;
-}
-
-
-/* SECTIONS */
-
-section{
-    padding:40px 20px;
-}
-
-
-.title{
-    text-align:center;
-    color:#ffd700;
-    font-size:32px;
-    margin-bottom:30px;
-}
-
-
-/* MENU */
-
-.menu{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-
-.card{
-    background:#171717;
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 0 20px #000;
-}
-
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-
-.card h3{
-    color:#ffd700;
-    margin:15px;
-}
-
-
-.card button{
-    background:#ffd700;
-    color:black;
-    padding:12px 20px;
-    border:none;
-    border-radius:20px;
-}
-
-
-
-/* ORDER */
-
-.order-box{
-
-background:#171717;
-padding:30px;
-border-radius:20px;
-max-width:600px;
-margin:auto;
-
-}
-
-
-input,select,textarea{
-
-width:100%;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-border:none;
-
-}
-
-
-.order-btn{
-
-width:100%;
-background:#25D366;
-color:white;
-padding:15px;
-border:none;
-border-radius:30px;
-font-size:18px;
-
-}
-
-
-
-/* LOCATION */
-
-.location{
-
-background:#111;
-text-align:center;
-
-}
-
-
-.location h2{
-
-color:#ffd700;
-
-}
-
-
-.location a{
-
-display:inline-block;
-margin-top:20px;
-background:#ffd700;
-padding:15px;
-color:black;
-text-decoration:none;
-border-radius:20px;
-
-}
-
-
-
-/* AI BUTTON */
-
-.ai{
-
-position:fixed;
-bottom:25px;
-right:25px;
-
-background:#ffd700;
-color:black;
-
-width:60px;
-height:60px;
-
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:25px;
-
-box-shadow:0 0 20px gold;
-
-}
-
-
-
-/* WHATSAPP */
-
-.whatsapp{
-
-position:fixed;
-bottom:25px;
-left:25px;
-
-background:#25D366;
-
-width:60px;
-height:60px;
-
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:25px;
-
-}
-
-
-footer{
-
-background:#000;
-padding:30px;
-text-align:center;
-color:#ffd700;
-
-}
-
-
-
-/* PHONE */
-
-@media(max-width:600px){
-
-header h1{
-
-font-size:25px;
-
-}
-
-
-.hero h2{
-
-font-size:30px;
-
-}
-
-
-nav{
-
-flex-direction:column;
-
-}
-
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:var(--black);color:var(--white);line-height:1.6;}
+.container{max-width:1200px;margin:auto;padding:20px;}
+header{background:linear-gradient(135deg,var(--black),var(--dark));padding:20px;text-align:center;border-bottom:3px solid var(--gold);}
+header h1{color:var(--gold);font-size:2.5rem;}
+header p{color:var(--white);}
+nav{background:var(--dark);padding:10px;text-align:center;}
+nav a{color:var(--gold);margin:0 15px;text-decoration:none;font-weight:bold;}
+section{padding:60px 20px;}
+.section-title{text-align:center;color:var(--gold);font-size:2rem;margin-bottom:20px;}
+.btn{background:var(--gold);color:var(--black);padding:12px 25px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;}
+.btn:hover{opacity:0.9;}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.menu-item{background:var(--dark);padding:20px;border-radius:12px;border:1px solid var(--gold);}
+.menu-item h3{color:var(--gold);}
+.price{color:var(--gold);font-size:1.2rem;font-weight:bold;}
+form{background:var(--dark);padding:20px;border-radius:12px;border:1px solid var(--gold);}
+input,textarea,select{width:100%;padding:10px;margin:10px 0;border-radius:6px;border:1px solid var(--gold);background:var(--black);color:var(--white);}
+footer{background:var(--dark);text-align:center;padding:20px;border-top:3px solid var(--gold);}
+#ai-chat{position:fixed;bottom:20px;right:20px;background:var(--gold);color:var(--black);padding:15px;border-radius:50px;cursor:pointer;font-weight:bold;}
+#admin{ display:none; }
+.qr{width:200px;margin:20px auto;display:block;border:3px solid var(--gold);}
+@media(max-width:768px){header h1{font-size:1.8rem;}}
 </style>
-
 </head>
-
-
 <body>
 
-
 <header>
-
-<h1>GYE NYAME HOT KENKEY</h1>
-
-<p>Premium Ghanaian Kenkey • Fresh • Delicious • Trusted</p>
-
+  <h1>👑 GYE NYAME HOTE KENKEY</h1>
+  <p>Luxury Kenkey & Grilled Tilapia | Accra, Ghana</p>
 </header>
 
-
 <nav>
-
-<a href="#menu">Menu</a>
-<a href="#order">Order</a>
-<a href="#location">Location</a>
-
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#order">Order</a>
+  <a href="#location">Location</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#admin-login">Admin</a>
 </nav>
+
+<section id="home">
+  <div class="container">
+    <h2 class="section-title">Welcome to GYE NYAME</h2>
+    <p style="text-align:center;">The taste of Ghana. Hot, fresh kenkey with shito, fried fish and tilapia. Delivered to you in Accra.</p>
+    <div style="text-align:center;margin-top:20px;">
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <h2 class="section-title">🍽️ Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Kenkey + Fried Fish + Shito</h3>
+        <p>2 balls kenkey, fried tilapia, pepper, shito</p>
+        <p class="price">GH₵35</p>
+      </div>
+      <div class="menu-item">
+        <h3>Kenkey + Grilled Tilapia</h3>
+        <p>3 balls kenkey, grilled tilapia, onions, pepper</p>
+        <p class="price">GH₵50</p>
+      </div>
+      <div class="menu-item">
+        <h3>Family Pack</h3>
+        <p>10 balls kenkey + 3 tilapia + shito + drinks</p>
+        <p class="price">GH₵150</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="container">
+    <h2 class="section-title">📲 Order Now</h2>
+    <form id="orderForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+      <select id="item" required>
+        <option value="">Select Item</option>
+        <option>Kenkey + Fried Fish - GH₵35</option>
+        <option>Kenkey + Grilled Tilapia - GH₵50</option>
+        <option>Family Pack - GH₵150</option>
+      </select>
+      <textarea id="address" placeholder="Delivery Address in Accra" required></textarea>
+      <button type="submit" class="btn">Send Order to WhatsApp</button>
+    </form>
+
+    <div style="text-align:center;margin-top:30px;">
+      <h3>🔳 Scan to Order</h3>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/233XXXXXXXXXX" class="qr" alt="QR Code">
+      <p>Scan to order on WhatsApp</p>
+    </div>
+  </div>
+</section>
+
+<section id="delivery">
+  <div class="container">
+    <h2 class="section-title">🚚 Delivery Areas</h2>
+    <p style="text-align:center;">We deliver in: Accra Central, Kaneshie, Dansoman, Circle, Tema, East Legon. Delivery fee: GH₵10 - GH₵25</p>
+  </div>
+</section>
+
+<section id="location">
+  <div class="container">
+    <h2 class="section-title">📍 Find Us</h2>
+    <p style="text-align:center;">GYE NYAME HOTE KENKEY<br>Accra, Greater Accra Region, Ghana<br>Call: +233 24 XXXX</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2 class="section-title">⭐ Customer Reviews</h2>
+    <div class="menu-item">
+      <p>"Best kenkey in Accra! The shito is fire 🔥" - Ama K.</p>
+    </div>
+    <div class="menu-item">
+      <p>"Fast delivery and hot food. GYE NYAME is the best" - Kofi M.</p>
+    </div>
+  </div>
+</section>
+
+<section id="admin-login">
+  <div class="container">
+    <h2 class="section-title">🔐 Admin Login</h2>
+    <form id="loginForm">
+      <input type="text" id="user" placeholder="Username" required>
+      <input type="password" id="pass" placeholder="Password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+</section>
+
+<section id="admin">
+  <div class="container">
+    <h2 class="section-title">Admin Panel</h2>
+    <p>Welcome Boss! Here you will see customer orders.</p>
+    <button class="btn" onclick="alert('Orders will appear here')">View Orders</button>
+  </div>
+</section>
+
+<div id="ai-chat" onclick="alert('AI Assistant: Hi Boss! I can help customers order kenkey 🤖')">🤖 AI Help</div>
+
+<footer>
+  <p>© 2026 GYE NYAME HOTE KENKEY. All Rights Reserved. | Luxury Taste of Ghana</p>
+</footer>
+
+<script>
+// Admin Login
+document.getElementById('loginForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const u=document.getElementById('user').value;
+  const p=document.getElementById('pass').value;
+  if(u==='Prosper' && p==='Dhino@12345'){
+    document.getElementById('admin').style.display='block';
+    alert('Welcome Boss!');
+  }else{ alert('Wrong details'); }
+});
+
+// Order to WhatsApp
+document.getElementById('orderForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const phone=document.getElementById('phone').value;
+  const item=document.getElementById('item').value;
+  const address=document.getElementById('address').value;
+  const message=`New Order!%0AName: ${name}%0APhone: ${phone}%0AItem: ${item}%0AAddress: ${address}`;
+  window.open(`https://wa.me/233XXXXXXXXXX?text=${message}`,'_blank');
+});
+</script>
+
+</body>
+</html>
