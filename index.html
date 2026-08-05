@@ -3,334 +3,331 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYE NYAME HOTE KENKEY - ADMIN DASHBOARD</title>
+
+<title>Gye Nyame Hot Kenkey | Premium Ghana Food</title>
+
 <style>
-  *{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
-  body{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); min-height:100vh}
-  
-  /* LOGIN PAGE */
-  .login-container{display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px}
-  .login-box{background:white; padding:35px; border-radius:20px; width:100%; max-width:420px; box-shadow:0 10px 40px rgba(0,0,0,0.3)}
-  .login-box h1{color:#D32F2F; text-align:center; margin-bottom:5px}
-  .login-box .subtitle{text-align:center; color:#666; margin-bottom:20px; font-size:14px}
-  .input-group{margin-bottom:15px}
-  .input-group label{display:block; margin-bottom:5px; font-weight:bold; color:#8B4513}
-  .input-group input, .input-group select, .input-group textarea{width:100%; padding:14px; border:2px solid #FFEFD5; border-radius:10px; font-size:16px}
-  .login-btn{width:100%; padding:16px; background:linear-gradient(90deg,#FF6B00,#D32F2F); color:white; border:none; border-radius:50px; font-size:18px; font-weight:bold; cursor:pointer}
-  .switch{text-align:center; margin-top:15px; color:#666}
-  .switch a{color:#D32F2F; font-weight:bold; cursor:pointer}
-  .hidden{display:none}
-  
-  /* ADMIN PANEL */
-  .admin-panel{display:none; padding:20px; background:#f5f5f5; min-height:100vh}
-  .admin-header{background:linear-gradient(90deg,#000,#8B4513); color:#FFC107; padding:20px; border-radius:15px; margin-bottom:20px; text-align:center}
-  .admin-header h1{font-size:28px}
-  .stats{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-bottom:20px}
-  .stat-card{background:white; padding:20px; border-radius:15px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1)}
-  .stat-card h3{color:#666; font-size:14px}
-  .stat-card p{color:#D32F2F; font-size:32px; font-weight:bold}
-  
-  .dashboard-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px}
-  .card{background:white; padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1)}
-  .card h2{color:#D32F2F; border-bottom:3px solid #FFC107; padding-bottom:10px; margin-bottom:15px}
-  .order-item{border-left:5px solid #25D366; padding:12px; margin:10px 0; background:#E8F5E9; border-radius:8px}
-  .order-item button{background:#D32F2F; color:white; border:none; padding:8px 12px; border-radius:8px; margin-right:8px; cursor:pointer; margin-top:8px}
-  .message-item{border-left:5px solid #FF6B00; padding:12px; margin:10px 0; background:#FFF0E0; border-radius:8px}
-  .logout-btn{position:fixed; top:20px; right:20px; background:#000; color:#FFC107; padding:10px 20px; border:none; border-radius:20px; cursor:pointer; font-weight:bold}
-  
-  /* CUSTOMER APP */
-  .app{display:none}
-  .hero{background:linear-gradient(135deg,#FF6B00,#D32F2F,#8B4513); color:white; text-align:center; padding:40px 20px}
-  .btn{display:block; width:90%; max-width:350px; padding:18px; margin:12px auto; border-radius:50px; font-weight:bold; text-decoration:none; font-size:20px; text-align:center; background:linear-gradient(90deg,#25D366,#128C7E); color:white; border:none; cursor:pointer}
-  .section{padding:30px 20px; max-width:800px; margin:auto}
-  .menu-card{background:white; padding:15px; margin:15px 0; border-radius:15px; display:flex; justify-content:space-between; border-left:6px solid #FF6B00}
-  .price{color:#D32F2F; font-size:22px; font-weight:bold}
-  .order-form{background:white; padding:25px; border-radius:15px}
-  
-  @media(max-width:900px){.dashboard-grid{grid-template-columns:1fr}}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#000,#b8860b);
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    color:#ffd700;
+    font-size:35px;
+}
+
+header p{
+    margin-top:10px;
+}
+
+
+/* NAVIGATION */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#111;
+    padding:15px;
+}
+
+nav a{
+    color:#ffd700;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+/* HERO */
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
+    
+    background-size:cover;
+    background-position:center;
+}
+
+
+.hero h2{
+    font-size:45px;
+    color:#ffd700;
+}
+
+
+.hero button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ffd700;
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+/* SECTIONS */
+
+section{
+    padding:40px 20px;
+}
+
+
+.title{
+    text-align:center;
+    color:#ffd700;
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+
+/* MENU */
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+
+.card{
+    background:#171717;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 0 20px #000;
+}
+
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+
+.card h3{
+    color:#ffd700;
+    margin:15px;
+}
+
+
+.card button{
+    background:#ffd700;
+    color:black;
+    padding:12px 20px;
+    border:none;
+    border-radius:20px;
+}
+
+
+
+/* ORDER */
+
+.order-box{
+
+background:#171717;
+padding:30px;
+border-radius:20px;
+max-width:600px;
+margin:auto;
+
+}
+
+
+input,select,textarea{
+
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+border:none;
+
+}
+
+
+.order-btn{
+
+width:100%;
+background:#25D366;
+color:white;
+padding:15px;
+border:none;
+border-radius:30px;
+font-size:18px;
+
+}
+
+
+
+/* LOCATION */
+
+.location{
+
+background:#111;
+text-align:center;
+
+}
+
+
+.location h2{
+
+color:#ffd700;
+
+}
+
+
+.location a{
+
+display:inline-block;
+margin-top:20px;
+background:#ffd700;
+padding:15px;
+color:black;
+text-decoration:none;
+border-radius:20px;
+
+}
+
+
+
+/* AI BUTTON */
+
+.ai{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+background:#ffd700;
+color:black;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:25px;
+
+box-shadow:0 0 20px gold;
+
+}
+
+
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+bottom:25px;
+left:25px;
+
+background:#25D366;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:25px;
+
+}
+
+
+footer{
+
+background:#000;
+padding:30px;
+text-align:center;
+color:#ffd700;
+
+}
+
+
+
+/* PHONE */
+
+@media(max-width:600px){
+
+header h1{
+
+font-size:25px;
+
+}
+
+
+.hero h2{
+
+font-size:30px;
+
+}
+
+
+nav{
+
+flex-direction:column;
+
+}
+
+
+}
+
 </style>
+
 </head>
+
+
 <body>
 
-<!-- LOGIN / SIGNUP PAGE -->
-<div class="login-container" id="loginPage">
-  <div class="login-box">
-    <h1>🍛 GYE NYAME HOTE KENKEY</h1>
-    <p class="subtitle" id="loginSubtitle">Customer Login</p>
-    
-    <div id="customerLogin">
-      <div class="input-group"><label>Phone Number</label><input type="tel" id="loginPhone" placeholder="0242681763"></div>
-      <div class="input-group"><label>Password</label><input type="password" id="loginPass"></div>
-      <button class="login-btn" onclick="customerLogin()">Login</button>
-      <p class="switch">New customer? <a onclick="showCustomerSignup()">Sign Up</a></p>
-      <p class="switch" style="margin-top:10px"><a onclick="showAdminLogin()">Login as Admin</a></p>
-    </div>
-    
-    <div id="customerSignup" class="hidden">
-      <div class="input-group"><label>Full Name</label><input type="text" id="signupName"></div>
-      <div class="input-group"><label>Phone Number</label><input type="tel" id="signupPhone"></div>
-      <div class="input-group"><label>Password</label><input type="password" id="signupPass"></div>
-      <button class="login-btn" onclick="customerSignup()">Create Account</button>
-      <p class="switch">Already have account? <a onclick="showCustomerLogin()">Login</a></p>
-    </div>
-    
-    <div id="adminLogin" class="hidden">
-      <p style="text-align:center; color:#D32F2F; font-weight:bold; margin-bottom:10px">🔒 ADMIN ONLY</p>
-      <div class="input-group"><label>Admin Username</label><input type="text" id="adminUser" placeholder="Enter username"></div>
-      <div class="input-group"><label>Admin Password</label><input type="password" id="adminPass" placeholder="Enter password"></div>
-      <button class="login-btn" onclick="adminLogin()">Login to Dashboard</button>
-      <p class="switch"><a onclick="showCustomerLogin()">Back to Customer</a></p>
-    </div>
-  </div>
-</div>
 
-<!-- ADMIN DASHBOARD -->
-<div class="admin-panel" id="adminPanel">
-  <button class="logout-btn" onclick="logout()">Logout</button>
-  <div class="admin-header">
-    <h1>👑 MAMA JOYCE ADMIN PANEL</h1>
-    <p>GYE NYAME HOTE KENKEY - ACCRA SPINTEX</p>
-  </div>
-  
-  <div class="stats">
-    <div class="stat-card"><h3>Today's Visitors</h3><p id="visitorCount">0</p></div>
-    <div class="stat-card"><h3>New Orders</h3><p id="orderCount">0</p></div>
-    <div class="stat-card"><h3>Total Customers</h3><p id="customerCount">0</p></div>
-  </div>
-  
-  <div class="dashboard-grid">
-    <div class="card">
-      <h2>📦 New Orders</h2>
-      <div id="ordersList">No new orders yet</div>
-    </div>
-    
-    <div class="card">
-      <h2>💬 Customer Messages</h2>
-      <div id="messagesList">No messages yet</div>
-    </div>
-    
-    <div class="card">
-      <h2>👥 Customer Accounts</h2>
-      <div id="customersList">No customers yet</div>
-    </div>
-    
-    <div class="card">
-      <h2>📊 Quick Actions</h2>
-      <button class="login-btn" onclick="alert('WhatsApp: 0242681763')">Contact Customer</button>
-      <button class="login-btn" style="background:#25D366; margin-top:10px" onclick="clearAllData()">Clear All Data</button>
-    </div>
-  </div>
-</div>
+<header>
 
-<!-- CUSTOMER APP -->
-<div class="app" id="customerApp">
-  <div class="hero">
-    <h1>🍛 GYE NYAME HOTE KENKEY</h1>
-    <p>Fresh. Soft. Made Daily in ACCRA SPINTEX</p>
-    <button class="btn" onclick="logout()">Logout</button>
-  </div>
-  
-  <div class="section">
-    <h2 style="color:white; text-align:center">📍 Our Menu</h2>
-    <div class="menu-card"><div><b>Kenkey Only</b><br>Soft and fresh</div><div class="price">GH¢5</div></div>
-    <div class="menu-card"><div><b>Kenkey + Chicken Back</b><br>Pepper + shito</div><div class="price">GH¢15</div></div>
-    <div class="menu-card"><div><b>Kenkey + Normal Fish</b><br>Fried fish</div><div class="price">GH¢20</div></div>
-    <div class="menu-card"><div><b>Kenkey + Red Fish</b><br>Big red fish</div><div class="price">GH¢30</div></div>
-  </div>
-  
-  <div class="section">
-    <h2 style="color:white; text-align:center">📝 Place Your Order</h2>
-    <div class="order-form">
-      <div class="input-group"><label>Your Name</label><input type="text" id="orderName"></div>
-      <div class="input-group"><label>Phone Number</label><input type="tel" id="orderPhone"></div>
-      <div class="input-group">
-        <label>Select Order</label>
-        <select id="orderItem">
-          <option>Kenkey Only - GH¢5</option>
-          <option>Kenkey + Chicken Back - GH¢15</option>
-          <option>Kenkey + Normal Fish - GH¢20</option>
-          <option>Kenkey + Red Fish - GH¢30</option>
-        </select>
-      </div>
-      <div class="input-group"><label>Delivery Location</label><input type="text" id="orderLocation" placeholder="ACCRA SPINTEX, KASAPREKO"></div>
-      <div class="input-group">
-        <label>Payment Method</label>
-        <select id="orderPayment">
-          <option>Cash on Delivery</option>
-          <option>Mobile Money - 0242681763</option>
-        </select>
-      </div>
-      <div class="input-group"><label>Special Message</label><textarea id="orderMessage" rows="3" placeholder="Please deliver fast"></textarea></div>
-      <button class="btn" onclick="submitOrder()">Submit Order</button>
-    </div>
-  </div>
-</div>
+<h1>GYE NYAME HOT KENKEY</h1>
 
-<script>
-// DATA STORAGE
-let orders = JSON.parse(localStorage.getItem('orders')) || [];
-let customers = JSON.parse(localStorage.getItem('customers')) || [];
-let messages = JSON.parse(localStorage.getItem('messages')) || [];
-let visitors = parseInt(localStorage.getItem('visitors')) || 0;
+<p>Premium Ghanaian Kenkey • Fresh • Delicious • Trusted</p>
 
-// VISITOR COUNT
-visitors++;
-localStorage.setItem('visitors', visitors);
+</header>
 
-// PAGE SWITCHING
-function showCustomerSignup(){
-  document.getElementById('customerLogin').classList.add('hidden');
-  document.getElementById('customerSignup').classList.remove('hidden');
-  document.getElementById('loginSubtitle').innerText = "Create Customer Account";
-}
-function showCustomerLogin(){
-  document.getElementById('customerSignup').classList.add('hidden');
-  document.getElementById('adminLogin').classList.add('hidden');
-  document.getElementById('customerLogin').classList.remove('hidden');
-  document.getElementById('loginSubtitle').innerText = "Customer Login";
-}
-function showAdminLogin(){
-  document.getElementById('customerLogin').classList.add('hidden');
-  document.getElementById('adminLogin').classList.remove('hidden');
-  document.getElementById('loginSubtitle').innerText = "Admin Login";
-}
 
-// CUSTOMER SIGNUP/LOGIN
-function customerSignup(){
-  let name = document.getElementById('signupName').value;
-  let phone = document.getElementById('signupPhone').value;
-  let pass = document.getElementById('signupPass').value;
-  if(name && phone && pass){
-    customers.push({name, phone, pass});
-    localStorage.setItem('customers', JSON.stringify(customers));
-    alert("Account created! Now login");
-    showCustomerLogin();
-  } else { alert("Fill all fields") }
-}
-function customerLogin(){
-  let phone = document.getElementById('loginPhone').value;
-  let pass = document.getElementById('loginPass').value;
-  let user = customers.find(c => c.phone === phone && c.pass === pass);
-  if(user){
-    sessionStorage.setItem('loggedIn', 'customer');
-    document.getElementById('loginPage').style.display = 'none';
-    document.getElementById('customerApp').style.display = 'block';
-    document.getElementById('orderName').value = user.name;
-    document.getElementById('orderPhone').value = user.phone;
-  } else { alert("Wrong phone or password") }
-}
+<nav>
 
-// ADMIN LOGIN - ONLY YOU
-function adminLogin(){
-  let user = document.getElementById('adminUser').value;
-  let pass = document.getElementById('adminPass').value;
-  if(user === 'Prosper' && pass === 'Dhino@12345'){ // CHANGE THIS PASSWORD
-    sessionStorage.setItem('loggedIn', 'admin');
-    document.getElementById('loginPage').style.display = 'none';
-    document.getElementById('adminPanel').style.display = 'block';
-    loadDashboard();
-  } else { alert("Wrong admin details") }
-}
+<a href="#menu">Menu</a>
+<a href="#order">Order</a>
+<a href="#location">Location</a>
 
-function logout(){
-  sessionStorage.removeItem('loggedIn');
-  document.getElementById('loginPage').style.display = 'flex';
-  document.getElementById('adminPanel').style.display = 'none';
-  document.getElementById('customerApp').style.display = 'none';
-}
-
-// SUBMIT ORDER
-function submitOrder(){
-  let name = document.getElementById('orderName').value;
-  let phone = document.getElementById('orderPhone').value;
-  let item = document.getElementById('orderItem').value;
-  let location = document.getElementById('orderLocation').value;
-  let payment = document.getElementById('orderPayment').value;
-  let message = document.getElementById('orderMessage').value;
-  
-  if(name && phone && location){
-    let newOrder = {id: Date.now(), name, phone, item, location, payment, message, time: new Date().toLocaleString()};
-    orders.push(newOrder);
-    localStorage.setItem('orders', JSON.stringify(orders));
-    if(message) {
-      messages.push({from: name, text: message, time: new Date().toLocaleString()});
-      localStorage.setItem('messages', JSON.stringify(messages));
-    }
-    alert("Order sent! We will contact you soon on WhatsApp");
-    document.getElementById('orderMessage').value = '';
-  } else { alert("Fill Name, Phone and Location") }
-}
-
-// LOAD ADMIN DASHBOARD
-function loadDashboard(){
-  document.getElementById('visitorCount').innerText = visitors;
-  document.getElementById('orderCount').innerText = orders.length;
-  document.getElementById('customerCount').innerText = customers.length;
-  
-  // ORDERS
-  let ordersHTML = '';
-  if(orders.length === 0) ordersHTML = 'No new orders yet';
-  else {
-    orders.slice().reverse().forEach(o => {
-      ordersHTML += `<div class="order-item">
-        <b>${o.name}</b> - ${o.item}<br>
-        <small>📞 ${o.phone} | 📍 ${o.location}</small><br>
-        <small>💰 ${o.payment} | 🕐 ${o.time}</small><br>
-        <button onclick="approveOrder(${o.id})">Approve Order</button>
-        <button onclick="contactCustomer('${o.phone}')">Contact</button>
-      </div>`;
-    });
-  }
-  document.getElementById('ordersList').innerHTML = ordersHTML;
-  
-  // MESSAGES
-  let msgHTML = '';
-  if(messages.length === 0) msgHTML = 'No messages yet';
-  else {
-    messages.slice().reverse().forEach(m => {
-      msgHTML += `<div class="message-item"><b>${m.from}:</b> "${m.text}"<br><small>${m.time}</small></div>`;
-    });
-  }
-  document.getElementById('messagesList').innerHTML = msgHTML;
-  
-  // CUSTOMERS
-  let custHTML = '';
-  if(customers.length === 0) custHTML = 'No customers yet';
-  else {
-    customers.forEach(c => {
-      custHTML += `<div class="order-item"><b>${c.name}</b><br><small>${c.phone}</small></div>`;
-    });
-  }
-  document.getElementById('customersList').innerHTML = custHTML;
-}
-
-function approveOrder(id){
-  alert("Order Approved! WhatsApp the customer now: 0242681763");
-  orders = orders.filter(o => o.id !== id);
-  localStorage.setItem('orders', JSON.stringify(orders));
-  loadDashboard();
-}
-function contactCustomer(phone){
-  window.open(`https://wa.me/233${phone.substring(1)}`, '_blank');
-}
-function clearAllData(){
-  if(confirm("Delete all orders and messages?")){
-    localStorage.clear(); location.reload();
-  }
-}
-
-// AUTO LOGIN CHECK
-let loggedIn = sessionStorage.getItem('loggedIn');
-if(loggedIn === 'admin'){
-  document.getElementById('loginPage').style.display = 'none';
-  document.getElementById('adminPanel').style.display = 'block';
-  loadDashboard();
-}
-if(loggedIn === 'customer'){
-  document.getElementById('loginPage').style.display = 'none';
-  document.getElementById('customerApp').style.display = 'block';
-}
-</script>
-
-</body>
-</html>
+</nav>
