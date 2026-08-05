@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>Mama Joyce Kenkey | Accra</title>
+<meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mensah Prosper | Developer Portfolio</title>
+
 
 <style>
 
@@ -12,141 +16,214 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
+
+
+:root{
+
+--main:#007bff;
+--dark:#111;
+--card:#ffffff;
+--text:#222;
+
+}
+
 
 body{
-background:#fff7df;
-color:#222;
+
+background:#f4f4f4;
+color:var(--text);
+transition:.4s;
+
 }
 
 
-/* HEADER */
+body.dark{
+
+background:#111;
+color:white;
+
+}
+
 
 header{
-background:linear-gradient(90deg,#00843d,#ffd700,#ce1126);
-padding:20px;
+
+position:sticky;
+top:0;
+z-index:999;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 8%;
+
+background:#111;
 color:white;
-text-align:center;
+
 }
 
 
-/* HERO */
+.logo{
+
+font-size:25px;
+font-weight:bold;
+
+}
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:12px;
+
+}
+
+
+nav a:hover{
+
+color:#00ffff;
+
+}
+
+
+.toggle{
+
+cursor:pointer;
+font-size:22px;
+
+}
+
+
+
 
 .hero{
 
 min-height:90vh;
 
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
-
-background-size:cover;
-background-position:center;
-
 display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
 
-padding:20px;
+align-items:center;
+justify-content:space-around;
+
+padding:50px 8%;
+
+flex-wrap:wrap;
 
 }
 
 
+
 .hero h1{
 
-font-size:60px;
-color:#ffd700;
+font-size:55px;
+
+}
+
+
+.hero span{
+
+color:var(--main);
 
 }
 
 
 .hero p{
 
-font-size:24px;
-margin:20px;
+font-size:20px;
+margin:20px 0;
 
 }
-
-
-
-.badge{
-
-background:#ce1126;
-padding:15px 25px;
-border-radius:50px;
-display:inline-block;
-
-animation:pulse 1.5s infinite;
-
-}
-
-
-@keyframes pulse{
-
-50%{
-transform:scale(1.1);
-}
-
-}
-
 
 
 
 .btn{
 
-padding:15px 30px;
-border-radius:30px;
-text-decoration:none;
-color:white;
-font-weight:bold;
 display:inline-block;
-margin:10px;
 
-transition:.3s;
+background:var(--main);
 
-}
+color:white;
 
+padding:15px 30px;
 
-.btn:hover{
+border-radius:30px;
 
-transform:scale(1.1);
+text-decoration:none;
 
-}
+border:none;
 
-
-
-.whatsapp{
-
-background:#25D366;
+cursor:pointer;
 
 }
 
 
-.call{
 
-background:#111;
+.profile{
+
+width:280px;
+height:280px;
+
+border-radius:50%;
+
+background:#ddd;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
 
 }
+
+
+.profile img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
 
 
 
 
 section{
 
-padding:60px 10%;
+padding:70px 8%;
+
+text-align:center;
 
 }
 
 
+
 .title{
 
-text-align:center;
-font-size:38px;
-color:#00843d;
+font-size:35px;
+
 margin-bottom:30px;
+
+}
+
+
+
+.cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
 
 }
 
@@ -154,64 +231,15 @@ margin-bottom:30px;
 
 .card{
 
-background:white;
+background:var(--card);
+
 padding:30px;
-border-radius:25px;
-box-shadow:0 10px 25px #ccc;
-margin:20px 0;
 
-}
+width:270px;
 
+border-radius:20px;
 
-
-
-
-/* STORY */
-
-
-.story{
-
-display:flex;
-gap:30px;
-align-items:center;
-flex-wrap:wrap;
-
-}
-
-
-.story img{
-
-width:320px;
-height:250px;
-object-fit:cover;
-border-radius:25px;
-
-}
-
-
-
-
-/* MENU */
-
-
-.menu{
-
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-
-}
-
-
-.food{
-
-flex:1;
-min-width:230px;
-background:white;
-padding:20px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 5px 15px #ccc;
+box-shadow:0 10px 25px #0002;
 
 transition:.3s;
 
@@ -219,7 +247,15 @@ transition:.3s;
 
 
 
-.food:hover{
+body.dark .card{
+
+background:#222;
+
+}
+
+
+
+.card:hover{
 
 transform:translateY(-10px);
 
@@ -227,68 +263,63 @@ transform:translateY(-10px);
 
 
 
-.food img{
 
-width:100%;
-height:170px;
-object-fit:cover;
+.skill{
+
+margin:20px auto;
+
+max-width:500px;
+
+text-align:left;
+
+}
+
+
+
+.bar{
+
+background:#ccc;
+
+height:15px;
+
 border-radius:20px;
 
 }
 
 
 
-.price{
+.progress{
 
-font-size:25px;
-color:green;
-font-weight:bold;
+height:100%;
 
-}
+background:var(--main);
 
-
-
-
-
-/* FLOATING ORDER */
-
-
-.float{
-
-position:fixed;
-bottom:25px;
-right:25px;
-
-background:#25D366;
-
-padding:18px;
-
-border-radius:50%;
-
-font-size:25px;
-
-text-decoration:none;
-
-color:white;
+border-radius:20px;
 
 }
 
 
 
-/* QR */
 
+input,textarea{
 
-.qr{
+width:100%;
 
-text-align:center;
+padding:15px;
+
+margin:10px;
+
+border-radius:10px;
+
+border:1px solid #aaa;
 
 }
 
 
 
-.qr img{
+textarea{
 
-width:180px;
+height:120px;
 
 }
 
@@ -297,10 +328,104 @@ width:180px;
 
 footer{
 
-background:#4b2600;
+background:#111;
+
 color:white;
+
 padding:30px;
+
 text-align:center;
+
+}
+
+
+
+
+
+.chat{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:var(--main);
+
+color:white;
+
+padding:20px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:25px;
+
+}
+
+
+
+
+#bot{
+
+display:none;
+
+position:fixed;
+
+bottom:90px;
+
+right:20px;
+
+width:300px;
+
+background:white;
+
+color:black;
+
+padding:20px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px #0005;
+
+}
+
+
+
+body.dark #bot{
+
+background:#222;
+
+color:white;
+
+}
+
+
+
+@media(max-width:700px){
+
+
+header{
+
+flex-direction:column;
+
+}
+
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+
+nav{
+
+margin-top:15px;
+
+}
+
 
 }
 
@@ -314,465 +439,76 @@ text-align:center;
 <body>
 
 
-
 <header>
 
-<h2>
-🍲 MAMA JOYCE KENKEY
-</h2>
 
-<p>
-Accra Kasapreko
-</p>
+<div class="logo">
+Mensah Prosper
+</div>
+
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#business">Business</a>
+
+<a href="#contact">Contact</a>
+
+
+<span class="toggle" onclick="darkMode()">
+🌙
+</span>
+
+
+</nav>
+
 
 </header>
 
 
 
-
-<div class="hero">
+<section class="hero" id="home">
 
 
 <div>
 
 
 <h1>
-MAMA JOYCE KENKEY
+Hello, I'm <span>Mensah Prosper</span>
 </h1>
 
 
 <p>
-Soft Ghana Kenkey • Fresh Pepper • Made With Love ❤️
+IT Student | Web Developer | Future Tech Entrepreneur
 </p>
 
 
-
-<div class="badge">
-
-🚚 FAST DELIVERY AVAILABLE
-
-</div>
-
-
-
-<br>
-
-
-<a class="btn whatsapp"
-href="https://wa.me/233242681763">
-
-🟢 Order WhatsApp
-
+<a class="btn" href="#contact">
+Hire Me
 </a>
 
 
-
-<a class="btn call"
-href="tel:0242681763">
-
-📞 Call Now
-
+<a class="btn" href="#">
+Download CV
 </a>
 
 
 </div>
 
 
-</div>
 
+<div class="profile">
 
-
-
-
-<a class="float"
-href="https://wa.me/233242681763">
-
-💬
-
-</a>
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-🔥 Fresh Today
-
-</h2>
-
-
-<div class="card" style="text-align:center">
-
-12+ customers already enjoying Mama Joyce Kenkey today 🍲
+<img src="your-image.jpg">
 
 </div>
 
 
 </section>
-
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-👩🏿 People Buy From People
-
-</h2>
-
-
-<div class="card story">
-
-
-<img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d">
-
-
-<p>
-
-Mama Joyce has been wrapping hot kenkey in Accra Kasapreko for 13 years.
-
-<br><br>
-
-Fresh every morning.
-
-Soft every time.
-
-Pepper that makes you sweat and smile.
-
-<br><br>
-
-From our kitchen to your plate — taste the difference.
-
-</p>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-🍽️ Our Menu
-
-</h2>
-
-
-<div class="menu">
-
-
-
-<div class="food">
-
-<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-
-<h2>
-
-Kenkey Only
-
-</h2>
-
-<p class="price">
-
-GH¢5
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="food">
-
-
-<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
-
-
-<h2>
-
-Kenkey + Fish
-
-</h2>
-
-
-<p class="price">
-
-GH¢20 - GH¢30
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="food">
-
-
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
-
-
-<h2>
-
-Kenkey + Chicken
-
-</h2>
-
-
-<p class="price">
-
-GH¢35
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="food">
-
-
-<h2>
-
-🔥 All In One
-
-</h2>
-
-
-<p class="price">
-
-GH¢50
-
-</p>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-💰 MoMo Payment
-
-</h2>
-
-
-
-<div class="card">
-
-
-<p>
-
-MTN MoMo:
-
-<b>
-
-0242681763
-
-</b>
-
-</p>
-
-
-<p>
-
-Send payment receipt through WhatsApp.
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-📱 Scan To Order
-
-</h2>
-
-
-<div class="card qr">
-
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/233242681763">
-
-
-<p>
-
-Scan QR Code and order directly
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-⭐ Customer Review
-
-</h2>
-
-
-
-<div class="card">
-
-
-⭐⭐⭐⭐⭐
-
-
-<p>
-
-"Eii this kenkey have been soft paa!
-
-The pepper too has fire 🔥.
-
-Mama Joyce in Accra Kasapreko dey do the work."
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-📍 Find Us
-
-</h2>
-
-
-<div class="card" style="text-align:center">
-
-
-Accra - Kasapreko
-
-
-<br><br>
-
-
-<a class="btn whatsapp"
-href="https://maps.google.com/?q=Kasapreko+Accra">
-
-🗺️ Open Google Maps
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-
-<h2>
-
-MAMA JOYCE KENKEY 🍲
-
-</h2>
-
-
-<p>
-
-Open Daily: 8AM - 9PM
-
-</p>
-
-
-<p>
-
-☎ 0242681763
-
-</p>
-
-
-</footer>
-
-
-
-
-</body>
-
-</html>
