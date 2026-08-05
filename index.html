@@ -1,587 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mama Joyce Kenkey | Accra</title>
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>GYE NYAME HOTE KENKEY - ACCRA-KASAPEREKO | Fresh Kenkey Delivery</title>
+<meta name="description" content="Order fresh hot kenkey in ACCRA-KASAPEREKO. Kenkey + Fish + Chicken. Call 0242681763 or WhatsApp to order.">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#fff7df;
-color:#222;
-}
-
-header{
-background:linear-gradient(90deg,#00843d,#ffd700,#ce1126);
-color:white;
-padding:20px;
-text-align:center;
-}
-
-nav{
-background:#111;
-padding:15px;
-text-align:center;
-}
-
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-
-.hero{
-
-height:90vh;
-
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url("https://images.unsplash.com/photo-1601050690597-df0568f70950");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-
-}
-
-
-.hero h1{
-
-font-size:60px;
-color:#ffd700;
-
-}
-
-
-.hero p{
-
-font-size:25px;
-margin:20px;
-
-}
-
-
-.btn{
-
-padding:15px 30px;
-border-radius:30px;
-text-decoration:none;
-color:white;
-display:inline-block;
-margin:10px;
-font-weight:bold;
-
-}
-
-
-.whatsapp{
-background:#25D366;
-}
-
-
-.call{
-background:#000;
-}
-
-
-.delivery{
-
-background:#ce1126;
-padding:15px;
-border-radius:30px;
-display:inline-block;
-
-animation:pulse 1.5s infinite;
-
-}
-
-
-@keyframes pulse{
-
-50%{
-transform:scale(1.1);
-}
-
-}
-
-
-section{
-
-padding:60px 10%;
-
-}
-
-
-.title{
-
-text-align:center;
-font-size:40px;
-color:#00843d;
-margin-bottom:30px;
-
-}
-
-
-.card{
-
-background:white;
-padding:30px;
-border-radius:25px;
-box-shadow:0 10px 25px #ccc;
-margin:20px 0;
-
-}
-
-
-
-.menu{
-
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-
-}
-
-
-
-.food{
-
-flex:1;
-min-width:230px;
-background:white;
-padding:20px;
-border-radius:20px;
-text-align:center;
-transition:.3s;
-
-}
-
-
-
-.food:hover{
-
-transform:translateY(-10px);
-
-}
-
-
-
-.food img{
-
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:20px;
-
-}
-
-
-
-.price{
-
-color:green;
-font-size:25px;
-font-weight:bold;
-
-}
-
-
-.qr{
-
-text-align:center;
-
-}
-
-
-.qr img{
-
-width:200px;
-
-}
-
-
-
-.float{
-
-position:fixed;
-right:25px;
-bottom:25px;
-background:#25D366;
-padding:18px;
-border-radius:50%;
-color:white;
-font-size:25px;
-text-decoration:none;
-
-}
-
-
-footer{
-
-background:#4b2600;
-color:white;
-padding:30px;
-text-align:center;
-
-}
-
+  *{margin:0; padding:0; box-sizing:border-box}
+  body{font-family:Arial, sans-serif; background:#FFF8F0; color:#333; line-height:1.6}
+  
+  /* HERO */
+  .hero{background:linear-gradient(rgba(139,69,19,0.8), rgba(211,47,47,0.8)), url('kenkey-hero.jpg') center/cover; color:white; text-align:center; padding:60px 20px}
+  .hero h1{font-size:36px; margin:0 0 10px; text-shadow:2px 2px 4px #000}
+  .hero p{font-size:20px; margin:0 0 25px}
+  .badge{display:inline-block; background:#FFC107; color:#000; padding:8px 15px; border-radius:25px; font-size:14px; font-weight:bold; margin-bottom:15px}
+  
+  /* BUTTONS */
+  .btn{display:inline-block; padding:16px 35px; margin:10px; border-radius:50px; font-weight:bold; text-decoration:none; font-size:18px; transition:0.3s}
+  .btn:hover{transform:scale(1.05)}
+  .btn-wa{background:#2E7D32; color:white; box-shadow:0 4px 10px rgba(46,125,50,0.4)}
+  .btn-call{background:#000; color:white; box-shadow:0 4px 10px rgba(0,0,0,0.4)}
+  
+  /* SECTIONS */
+  .section{padding:50px 20px; max-width:800px; margin:auto}
+  .section h2{color:#8B4513; border-bottom:4px solid #D32F2F; display:inline-block; padding-bottom:8px; margin-bottom:25px; font-size:28px}
+  
+  /* MENU */
+  .menu-card{background:white; border-left:8px solid #D32F2F; padding:20px; margin:20px 0; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); display:flex; justify-content:space-between; align-items:center; gap:15px}
+  .menu-card img{width:120px; height:120px; border-radius:12px; object-fit:cover; border:3px solid #FFF8F0}
+  .menu-text b{font-size:18px}
+  .price{color:#D32F2F; font-size:24px; font-weight:bold}
+  
+  /* REVIEW */
+  .review{background:white; padding:20px; border-radius:12px; margin:15px 0; border-left:5px solid #2E7D32; box-shadow:0 3px 8px rgba(0,0,0,0.08)}
+  
+  /* CONTACT */
+  .contact-box{background:linear-gradient(135deg,#8B4513,#D32F2F); color:white; padding:30px; border-radius:15px; text-align:center}
+  .contact-box p{font-size:18px; margin:10px 0}
+  
+  /* FOOTER */
+  .footer{background:#222; color:white; text-align:center; padding:25px; font-size:15px}
+  
+  /* MOBILE */
+  @media(max-width:600px){
+    .menu-card{flex-direction:column; text-align:center}
+    .hero h1{font-size:28px}
+  }
 </style>
-
 </head>
-
-
 <body>
 
-
-<header>
-
-<h1>🍲 MAMA JOYCE KENKEY</h1>
-
-<p>Accra Kasapreko</p>
-
-</header>
-
-
-
-<nav>
-
-<a href="#menu">Menu</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-
-
+<!-- HERO -->
 <div class="hero">
+  <h1>🍛 GYE NYAME HOTE KENKEY</h1>
+  <p>Fresh. Soft. Made Daily in ACCRA-KASAPEREKO</p>
+  <span class="badge">🔥 HOT & FRESH DAILY 🔥</span><br>
+  <a href="https://wa.me/233242681763?text=Hi%20GYE%20NYAME%20HOTE%20KENKEY,%20I%20want%20to%20order%20kenkey" class="btn btn-wa">Order on WhatsApp</a>
+  <a href="tel:0242681763" class="btn btn-call">Call 0242681763</a>
+</div>
 
-<div>
+<!-- MENU -->
+<div class="section">
+  <h2>📍 Our Menu</h2>
+  
+  <div class="menu-card">
+    <div class="menu-text">
+      <b>Kenkey Only</b><br>
+      Soft, fresh kenkey wrapped by hand<br>
+      <span class="price">GH¢5</span>
+    </div>
+    <img src="kenkey1.jpg" alt="Kenkey Only">
+  </div>
 
-<h1>
-MAMA JOYCE KENKEY
-</h1>
+  <div class="menu-card">
+    <div class="menu-text">
+      <b>Kenkey + Chicken Back</b><br>
+      Comes with pepper, onions & shito<br>
+      <span class="price">GH¢15</span>
+    </div>
+    <img src="kenkey2.jpg" alt="Kenkey with Chicken Back">
+  </div>
 
+  <div class="menu-card">
+    <div class="menu-text">
+      <b>Kenkey + Normal Fish</b><br>
+      Fried fish + spicy pepper + onions<br>
+      <span class="price">GH¢20</span>
+    </div>
+    <img src="kenkey3.jpg" alt="Kenkey with Normal Fish">
+  </div>
 
-<p>
-Authentic Ghana Kenkey • Fish • Pepper ❤️
-</p>
-
-
-<div class="delivery">
-
-🚚 Fresh Delivery Available
+  <div class="menu-card">
+    <div class="menu-text">
+      <b>Kenkey + Red Fish</b><br>
+      Big red fish + special pepper sauce<br>
+      <span class="price">GH¢30</span>
+    </div>
+    <img src="kenkey4.jpg" alt="Kenkey with Red Fish">
+  </div>
 
 </div>
 
-
-<br>
-
-
-<a class="btn whatsapp"
-href="https://wa.me/233242681763">
-
-Order WhatsApp
-
-</a>
-
-
-<a class="btn call"
-href="tel:0242681763">
-
-Call Now
-
-</a>
-
-
+<!-- STORY -->
+<div class="section">
+  <h2>❤️ Our Story</h2>
+  <p>For years <b>GYE NYAME HOTE KENKEY</b> has been feeding ACCRA-KASAPEREKO with love. 
+  We start at 4am every day to soak, grind and wrap your kenkey by hand. 
+  <br><br>No preservatives. No shortcuts. Just the real Ga taste you grew up with.
+  <br><br>From our pot to your plate. Gye Nyame 🙏</p>
 </div>
 
+<!-- REVIEWS -->
+<div class="section">
+  <h2>⭐ What Customers Say</h2>
+  <div class="review">
+    "Ei this kenkey is soft paa! The pepper has fire. Best in Kasapereko"<br>
+    <b>- Ama K., Kasapereko</b>
+  </div>
+  <div class="review">
+    "Ordered at 9am, got it hot by 12pm. Red fish was fresh and big. I recommend!"<br>
+    <b>- Kofi D.</b>
+  </div>
 </div>
 
-
-
-<a class="float" href="https://wa.me/233242681763">
-💬
-</a>
-
-
-
-
-
-<section id="about">
-
-
-<h2 class="title">
-
-👩🏿 Our Story
-
-</h2>
-
-
-<div class="card">
-
-Mama Joyce has been making hot kenkey in Accra Kasapreko for 13 years.
-
-<br><br>
-
-Fresh every morning.
-Soft every time.
-
-<br><br>
-
-Pepper that makes you sweat and smile.
-
-<br><br>
-
-From our kitchen to your plate.
-
+<!-- CONTACT -->
+<div class="section">
+  <h2>📞 Order & Contact</h2>
+  <div class="contact-box">
+    <p><b>📍 Location:</b> ACCRA-KASAPEREKO</p>
+    <p><b>🕐 Hours:</b> Monday - Saturday | 6am - 8pm</p>
+    <p><b>💚 WhatsApp:</b> 0242681763</p>
+    <p><b>📞 Call:</b> 0242681763</p>
+    <p><b>💰 Pay with:</b> MOMO 0242681763</p>
+    <p><b>🚚 Delivery:</b> Available in Kasapereko & nearby areas. Call to confirm</p>
+  </div>
 </div>
 
-
-</section>
-
-
-
-
-
-
-<section id="menu">
-
-
-<h2 class="title">
-
-🍽️ Our Menu
-
-</h2>
-
-
-<div class="menu">
-
-
-<div class="food">
-
-<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-
-<h2>Kenkey Only</h2>
-
-<p class="price">
-GH¢5
-</p>
-
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 GYE NYAME HOTE KENKEY. Made with ❤️ in Accra 🇬🇭<br>
+  Gye Nyame - By God's Grace
 </div>
-
-
-
-
-<div class="food">
-
-<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
-
-<h2>Kenkey + Fish</h2>
-
-<p class="price">
-GH¢20 - GH¢30
-</p>
-
-</div>
-
-
-
-
-<div class="food">
-
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
-
-<h2>Kenkey + Chicken</h2>
-
-<p class="price">
-GH¢35
-</p>
-
-</div>
-
-
-
-
-<div class="food">
-
-<h2>🔥 All In One</h2>
-
-<p class="price">
-GH¢50
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-💰 MoMo Payment
-
-</h2>
-
-
-<div class="card">
-
-MTN MoMo:
-<b>0242681763</b>
-
-<br><br>
-
-Send receipt through WhatsApp after payment.
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-📱 Scan To Order
-
-</h2>
-
-
-<div class="card qr">
-
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/233242681763">
-
-
-<p>
-Scan and order instantly
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section id="contact">
-
-
-<h2 class="title">
-
-⭐ Customer Review
-
-</h2>
-
-
-<div class="card">
-
-⭐⭐⭐⭐⭐
-
-<br><br>
-
-"Eii this kenkey have been soft paa!
-The pepper too has fire 🔥.
-Mama Joyce dey do the work."
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2 class="title">
-
-📍 Location
-
-</h2>
-
-
-<div class="card" style="text-align:center">
-
-Accra - Kasapreko
-
-<br><br>
-
-
-<a class="btn whatsapp"
-href="https://maps.google.com/?q=Kasapreko+Accra">
-
-Open Map
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-<h2>
-MAMA JOYCE KENKEY 🍲
-</h2>
-
-<p>
-Open: 8AM - 9PM
-</p>
-
-<p>
-0242681763
-</p>
-
-</footer>
-
-
 
 </body>
-
 </html>
